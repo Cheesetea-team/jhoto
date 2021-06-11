@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/temporales/png/separate/sign (2).png" type="Texture" id=3]
 [ext_resource path="res://assets/temporales/png/separate/sign (3).png" type="Texture" id=4]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
@@ -32,7 +32,7 @@ speed = Vector2( 500, 500 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 9.53674e-07, -34.845 )
 scale = Vector2( 1, 1.745 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
