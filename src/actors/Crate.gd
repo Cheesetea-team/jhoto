@@ -1,10 +1,11 @@
 extends Actor
 
-export var speed = Vector2.ZERO
 var movement = Vector2()
 
 func _physics_process(_delta: float) -> void:
-	move_and_slide(movement * speed)
+	if movement:
+		move_and_slide(movement)
 	
-func set_movement(mov: Vector2) -> void:
-	movement = mov
+
+func _on_Player_pushbody(linear_vel) -> void:
+	movement = linear_vel

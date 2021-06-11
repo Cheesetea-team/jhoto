@@ -12,3 +12,10 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide(movement * speed)
+	var ncols = get_slide_count()
+	#for i in range(collisions):
+	#	var c = get_slide_collision(i)
+	if (ncols > 0):
+		print("Push!")
+		emit_signal("pushbody", movement*speed)
+
