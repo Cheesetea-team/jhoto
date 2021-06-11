@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/temporales/png/separate/crate.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/crate.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/temporales/png/separate/sign (2).png" type="Texture" id=3]
 [ext_resource path="res://assets/temporales/png/separate/sign (3).png" type="Texture" id=4]
@@ -22,7 +22,7 @@ animations = [ {
 } ]
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 343.958, 266.776 )
+position = Vector2( 346.077, 266.776 )
 collision_mask = 14
 script = ExtResource( 2 )
 __meta__ = {
