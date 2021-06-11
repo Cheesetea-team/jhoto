@@ -1,4 +1,5 @@
 extends KinematicBody2D
-signal pushbody(linear_vel) 
 class_name Actor
+
+signal pushbody(colid, linear_vel) 
 

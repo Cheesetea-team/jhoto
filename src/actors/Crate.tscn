@@ -18,5 +18,3 @@ shape = SubResource( 1 )
 [node name="crate" type="Sprite" parent="."]
 position = Vector2( 0, -32 )
 texture = ExtResource( 1 )
-
-[connection signal="pushbody" from="." to="." method="_on_Crate_pushbody"]
