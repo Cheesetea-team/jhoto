@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/movercaja.wav-7d865788d11c8704cd6a5490cccd8437.sample"
+
+[deps]
+
+source_file="res://assets/sonidos/movercaja.wav"
+dest_files=[ "res://.import/movercaja.wav-7d865788d11c8704cd6a5490cccd8437.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
