@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/levels/elements/Light_wall.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -371,5 +372,15 @@ position = Vector2( 335.969, 248.292 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 163.135, 257.637 )
+
+[node name="Light_wall" parent="." instance=ExtResource( 4 )]
+position = Vector2( 224, 80 )
+
+[node name="Light_wall3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 864, 96 )
+
+[node name="Light_wall5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 368 )
+rotation = -3.14159
 
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
