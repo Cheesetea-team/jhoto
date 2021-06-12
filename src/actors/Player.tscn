@@ -4,7 +4,7 @@
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/temporales/png/separate/sign (2).png" type="Texture" id=3]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -32,9 +32,20 @@ speed = Vector2( 500, 500 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -43 )
 scale = Vector2( 1, 0.758245 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 animation = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -35 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+offset_h = 1.0
+drag_margin_left = 0.5
+drag_margin_right = 0.5
