@@ -39,6 +39,6 @@ script = ExtResource( 4 )
 velocidad = 40
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground2/Creditos"]
-position = Vector2( 515, 1309 )
+position = Vector2( 511.437, 1070.24 )
 scale = Vector2( 1.04032, 1.03727 )
 texture = ExtResource( 2 )
