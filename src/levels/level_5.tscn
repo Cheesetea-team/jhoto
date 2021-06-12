@@ -595,7 +595,7 @@ sibling_path = NodePath("../Crate")
 [node name="GoalItem" parent="." instance=ExtResource( 6 )]
 position = Vector2( 605.39, 220.19 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
