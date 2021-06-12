@@ -13,6 +13,7 @@ func on_Arrow_hit():
 	$AnimatedSprite.connect("animation_finished", self, "_reset_player")
 	$AnimatedSprite.playing = true
 	$AnimatedSprite.animation = "dead"
+	$AudioStreamPlayer.play()
 
 func _reset_player():
 	global_position = initial_position

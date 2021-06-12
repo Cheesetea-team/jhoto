@@ -22,5 +22,6 @@ func spawn() -> PackedScene:
 	# Spawn
 	var new_object = object_trown.instance()
 	add_child(new_object)
+	$Trow.play()
 	return new_object
 

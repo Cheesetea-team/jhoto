@@ -19,3 +19,4 @@ func _physics_process(_delta: float) -> void:
 func _on_Player_pushbody(colid, linear_vel) -> void:
 	if colid == get_instance_id():
 		movement = linear_vel
+		$MoveCrate.play()
