@@ -541,7 +541,7 @@ tile_data = PoolIntArray( -262144, 18, 0, -262143, 18, 0, -262142, 18, 0, -26214
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
 GoalItems = [ NodePath("../Coin3"), NodePath("../Coin2"), NodePath("../Coin1") ]
-next_level_scene = "res://src/menus/Credits.tscn"
+next_level_scene = "res://src/levels/level_2.tscn"
 
 [node name="Light_wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( 674, -48 )
