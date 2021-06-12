@@ -33,6 +33,8 @@ func _disable_player():
 	$CollisionShape2D.disabled = true
 	
 func _process(_delta: float) -> void:
+	if Input.is_action_pressed("ui_home"):
+		get_tree().reload_current_scene()
 	var mr = int(Input.is_action_pressed("ui_right"))
 	var ml = int(Input.is_action_pressed("ui_left"))
 	var mu = int(Input.is_action_pressed("ui_up"))
