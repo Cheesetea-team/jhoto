@@ -26,7 +26,7 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/height=1024
+window/size/height=768
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -36,6 +36,7 @@ window/stretch/aspect="keep"
 2d_physics/layer_2="Objetos"
 2d_physics/layer_3="Enemigos"
 2d_physics/layer_4="Mapa(estático)"
+2d_physics/layer_5="Collectables"
 
 [physics]
 
