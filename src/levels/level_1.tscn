@@ -557,7 +557,7 @@ sibling_path = NodePath("../Crate2")
 position = Vector2( 223, 261 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 0
+frame = 1
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 2048
@@ -572,7 +572,7 @@ drag_margin_right = 0.2
 position = Vector2( 672, 128 )
 sibling_path = NodePath("../Crate")
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
