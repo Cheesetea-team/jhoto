@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export (Vector2) var linear_velocity = Vector2(-100, 0)
-export (String) var method_called_on_hit = "on_Arrow_hit"
+export (String) var method_called_on_hit = "on_Arrow_hit" 
 
 ##
 ## Hit receiving objects must define on_Arrow_hit() method
