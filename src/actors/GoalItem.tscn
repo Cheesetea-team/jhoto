@@ -33,7 +33,7 @@ __meta__ = {
 scale = Vector2( 1.39064, 1.31083 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]

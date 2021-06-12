@@ -601,7 +601,7 @@ position = Vector2( 672, -376 )
 [node name="GoalItem" parent="." instance=ExtResource( 6 )]
 position = Vector2( 157.602, -291.219 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
