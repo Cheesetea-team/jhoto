@@ -569,6 +569,10 @@ collision_layer = 8
 collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -262144, 6, 0, -262142, 9, 0, -262140, 9, 0, -262138, 9, 0, -262136, 9, 0, -262134, 8, 0, -131072, 10, 0, -131070, 0, 0, -131069, 25, 0, -131068, 1, 0, -131067, 0, 0, -131066, 1, 0, -131065, 1, 0, -131064, 0, 0, -131063, 1, 0, -131062, 13, 0, -65534, 0, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 0, 0, -65528, 1, 0, -65527, 0, 0, -65526, 13, 0, 0, 10, 0, 2, 25, 0, 3, 25, 0, 4, 25, 0, 5, 25, 0, 6, 25, 0, 7, 25, 0, 8, 0, 0, 9, 0, 0, 65538, 0, 0, 65539, 1, 0, 65540, 1, 0, 65541, 0, 0, 65542, 1, 0, 65543, 0, 0, 65544, 0, 0, 65545, 1, 0, 131074, 1, 0, 131075, 0, 0, 131076, 0, 0, 131077, 25, 0, 131078, 25, 0, 131079, 25, 0, 131080, 19, 0, 131082, 14, 0, 196608, 10, 0, 196610, 0, 0, 196611, 1, 0, 196612, 0, 0, 196613, 25, 0, 196614, 0, 0, 196615, 25, 0, 262146, 0, 0, 262147, 0, 0, 262148, 1, 0, 262149, 25, 0, 262150, 1, 0, 262151, 25, 0, 262152, 13, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 1, 0, 327686, 0, 0, 327687, 25, 0, 393216, 12, 0, 393218, 15, 0, 393221, 15, 0, 393224, 14, 0 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 256.0, 1026.0 ],
+"_edit_vertical_guides_": [ 764.0 ]
+}
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 1 )]
 position = Vector2( -185.133, -628.125 )
@@ -582,8 +586,9 @@ position = Vector2( 224, 248 )
 position = Vector2( 1, -21 )
 
 [node name="Camera2D" parent="Player" index="2"]
-limit_top = -192
-limit_right = 2048
+limit_left = -127
+limit_top = 256
+limit_right = 897
 limit_bottom = 1024
 limit_smoothed = true
 smoothing_speed = 8.0
@@ -605,7 +610,7 @@ position = Vector2( 415.117, 198.784 )
 [node name="GoalItem2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 158.122, -107.034 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
