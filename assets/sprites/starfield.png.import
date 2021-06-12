@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton_salir_seleccion.png-acccca9326f26e2c32fb24b4f93bf293.stex"
+path="res://.import/starfield.png-0246efa6403d9955e79fcf9ed9e2c6c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/psds/boton_salir_seleccion.png"
-dest_files=[ "res://.import/boton_salir_seleccion.png-acccca9326f26e2c32fb24b4f93bf293.stex" ]
+source_file="res://assets/sprites/starfield.png"
+dest_files=[ "res://.import/starfield.png-0246efa6403d9955e79fcf9ed9e2c6c2.stex" ]
 
 [params]
 
