@@ -9,10 +9,11 @@ func _ready() -> void:
 		sibling_node = get_node(sibling_path)
 
 func _physics_process(_delta: float) -> void:
+	var _err
 	if movement:
-		move_and_slide(movement)
+		_err = move_and_slide(movement)
 		if sibling_node:
-			sibling_node.move_and_slide(movement)
+			_err = sibling_node.move_and_slide(movement)
 		movement = Vector2.ZERO
 	
 func _on_Player_pushbody(colid, linear_vel) -> void:

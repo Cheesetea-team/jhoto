@@ -5,5 +5,5 @@ export (int) var y_correction = 1000
 
 signal pushbody(colid, linear_vel) 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	z_index = y_correction + position.y
