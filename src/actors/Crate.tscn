@@ -4,7 +4,7 @@
 [ext_resource path="res://src/actors/Crate.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 32 )
+extents = Vector2( 24, 24 )
 
 [node name="Crate" type="KinematicBody2D"]
 collision_layer = 2
