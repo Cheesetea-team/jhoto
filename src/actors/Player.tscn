@@ -75,7 +75,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 28, 29 )
+extents = Vector2( 23, 11 )
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0, 4 )
@@ -95,7 +95,7 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -35 )
+position = Vector2( -4, -15 )
 shape = SubResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
