@@ -607,7 +607,7 @@ object_trown = ExtResource( 6 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 400, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]

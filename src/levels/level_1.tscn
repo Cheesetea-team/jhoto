@@ -581,7 +581,7 @@ sibling_path = NodePath("../Crate2")
 position = Vector2( 223, 261 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 2
+frame = 0
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 2048
