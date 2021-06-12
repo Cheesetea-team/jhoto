@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/player_test.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
-[ext_resource path="res://assets/temporales/png/separate/sign (2).png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,7 +10,7 @@ animations = [ {
 "name": "left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "right",
 "speed": 5.0
@@ -33,7 +32,8 @@ speed = Vector2( 500, 500 )
 position = Vector2( 0, -43 )
 scale = Vector2( 1, 0.758245 )
 frames = SubResource( 1 )
-animation = "left"
+animation = "right"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -35 )
