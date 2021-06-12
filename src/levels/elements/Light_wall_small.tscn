@@ -46,9 +46,9 @@ animations = [ {
 [node name="Light_wall" type="Node2D"]
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 1.90735e-06, 63.3081 )
+position = Vector2( 1.90735e-06, 0 )
 rotation = 1.57079
-scale = Vector2( 6.30044, 15.5354 )
+scale = Vector2( 5.42044, 15.5354 )
 texture = ExtResource( 1 )
 script = ExtResource( 4 )
 
@@ -59,6 +59,6 @@ texture = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -11 )
 frames = SubResource( 7 )
-frame = 1
+frame = 3
 speed_scale = 2.0
 playing = true

@@ -10,10 +10,9 @@
 
 
 [node name="TextureRect" type="TextureRect"]
-margin_left = 1.41418
-margin_top = -1.41425
-margin_right = 1025.41
-margin_bottom = 1022.59
+margin_top = -144.0
+margin_right = 1024.0
+margin_bottom = 880.0
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
