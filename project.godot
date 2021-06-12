@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformer"
-run/main_scene="res://src/levels/level_1.tscn"
+run/main_scene="res://src/menus/menu_principal.tscn"
 config/icon="res://icon.png"
 
 [display]
