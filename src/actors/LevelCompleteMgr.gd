@@ -7,13 +7,13 @@ var aliveGoalItems: Array = []
 func _ready() -> void:
 	aliveGoalItems = GoalItems
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var nitems = aliveGoalItems.size()
 	if nitems == 0:
 		print("Level Complete!")
 		if next_level_scene:
-			print(next_level_scene)
-			get_tree().change_scene(next_level_scene)
+			if !get_tree().change_scene(next_level_scene):
+				print("Can't change scene!")
 		else:
 			get_tree().quit(0)
 		
