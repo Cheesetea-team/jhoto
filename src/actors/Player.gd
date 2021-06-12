@@ -3,6 +3,11 @@ extends Actor
 export var speed = Vector2.ZERO
 var movement = Vector2()
 
+# Hit by an arrow (to be called directly)
+func on_Arrow_hit():
+	print("Dead!")
+	queue_free()
+
 func _process(_delta: float) -> void:
 	var mr = int(Input.is_action_pressed("ui_right"))
 	var ml = int(Input.is_action_pressed("ui_left"))
