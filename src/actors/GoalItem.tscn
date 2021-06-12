@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/temporales/png/separate/coin (3).png" type="Texture" id=1]
-[ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/temporales/png/separate/coin (1).png" type="Texture" id=3]
 [ext_resource path="res://assets/temporales/png/separate/coin (4).png" type="Texture" id=4]
 [ext_resource path="res://assets/temporales/png/separate/coin (2).png" type="Texture" id=5]
@@ -23,12 +22,10 @@ radius = 31.0161
 [node name="GoalItem" type="KinematicBody2D"]
 collision_layer = 16
 collision_mask = 30
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_vertical_guides_": [ -32.0, 32.0 ]
 }
-speed = Vector2( 500, 500 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.39064, 1.31083 )
@@ -39,6 +36,7 @@ animation = "idle"
 shape = SubResource( 2 )
 
 [node name="CollectDetector" type="Area2D" parent="."]
+input_pickable = false
 
 [node name="CollectCollider" type="CollisionShape2D" parent="CollectDetector"]
 shape = SubResource( 3 )
