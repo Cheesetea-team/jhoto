@@ -611,9 +611,6 @@ object_trown = ExtResource( 8 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
 
-[node name="AnimatedSprite" parent="Throwers/Thrower1" index="0"]
-frame = 1
-
 [node name="SpawnTimer" parent="Throwers/Thrower1" index="3"]
 wait_time = 2.0
 
@@ -623,6 +620,9 @@ rotation = 3.14159
 object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
+
+[node name="AnimatedSprite" parent="Throwers/Thrower2" index="0"]
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/Thrower2" index="3"]
 wait_time = 1.25
@@ -634,7 +634,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -200, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/Thrower3" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Throwers/Thrower3" index="3"]
 wait_time = 2.0
@@ -645,6 +645,9 @@ rotation = 3.14159
 object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
+
+[node name="AnimatedSprite" parent="Throwers/Thrower4" index="0"]
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/Thrower4" index="3"]
 wait_time = 1.25

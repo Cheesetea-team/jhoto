@@ -395,6 +395,9 @@ object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -1000, 0 )
 
+[node name="AnimatedSprite" parent="Thrower" index="0"]
+frame = 1
+
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Thrower"]
