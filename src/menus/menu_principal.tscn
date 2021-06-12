@@ -10,10 +10,10 @@
 [ext_resource path="res://src/menus/menu_principal.gd" type="Script" id=8]
 
 [node name="Menu" type="TextureRect"]
-margin_left = 1.82188
-margin_top = -0.930256
-margin_right = 1025.82
-margin_bottom = 767.07
+margin_left = -2.0
+margin_top = -1.0
+margin_right = 1027.0
+margin_bottom = 767.0
 texture = ExtResource( 5 )
 script = ExtResource( 8 )
 __meta__ = {
