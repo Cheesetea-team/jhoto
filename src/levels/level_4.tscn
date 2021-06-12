@@ -5,7 +5,7 @@
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=5]
-[ext_resource path="res://src/actors/Arrow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/actors/BigFireball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -570,9 +570,6 @@ next_level_scene = "res://src/levels/level_5.tscn"
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 224, 248 )
 
-[node name="AnimatedSprite" parent="Player" index="0"]
-animation = "default"
-
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
 
@@ -598,18 +595,19 @@ sibling_path = NodePath("../Crate")
 position = Vector2( 219.88, -296.419 )
 
 [node name="Thrower" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1947.83, 255.054 )
+position = Vector2( 2022.8, 251.274 )
 object_trown = ExtResource( 6 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -400, 0 )
 
 [node name="Thrower2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 90.8571, -128.607 )
+position = Vector2( 27.9282, -191.536 )
+rotation = 3.14159
 object_trown = ExtResource( 6 )
-spawn_offset = Vector2( 64, 0 )
+spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 400, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
