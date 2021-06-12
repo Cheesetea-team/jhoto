@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/sprites/chara4.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=2]
@@ -51,6 +51,54 @@ region = Rect2( 26, 144, 26, 36 )
 atlas = ExtResource( 1 )
 region = Rect2( 52, 144, 26, 36 )
 
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 144, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 180, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 252, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 216, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 26, 144, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 26, 180, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 26, 252, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 26, 216, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 52, 144, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 52, 180, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 52, 252, 26, 36 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 52, 216, 26, 36 )
+
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
@@ -72,6 +120,11 @@ animations = [ {
 "loop": true,
 "name": "down",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": false,
+"name": "dead",
+"speed": 24.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=14]
@@ -90,8 +143,8 @@ speed = Vector2( 500, 500 )
 position = Vector2( -1, -47.625 )
 scale = Vector2( 2.61538, 2.46528 )
 frames = SubResource( 13 )
-animation = "right"
-frame = 1
+animation = "dead"
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

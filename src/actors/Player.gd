@@ -2,12 +2,35 @@ extends Actor
 
 export var speed = Vector2.ZERO
 var movement = Vector2()
+var initial_position = Vector2()
+
+func _ready() -> void:
+	initial_position = global_position
 
 # Hit by an arrow (to be called directly)
 func on_Arrow_hit():
-	print("Dead!")
-	queue_free()
+	_disable_player()
+	$AnimatedSprite.connect("animation_finished", self, "_reset_player")
+	$AnimatedSprite.playing = true
+	$AnimatedSprite.animation = "dead"
 
+func _reset_player():
+	global_position = initial_position
+	$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
+	_enable_player()
+
+func _enable_player():
+	set_process(true)
+	set_physics_process(true)
+	$CollisionShape2D.disabled = false
+	$AnimatedSprite.playing = false
+	$AnimatedSprite.animation = "right"
+
+func _disable_player():
+	set_process(false)
+	set_physics_process(false)
+	$CollisionShape2D.disabled = true
+	
 func _process(_delta: float) -> void:
 	var mr = int(Input.is_action_pressed("ui_right"))
 	var ml = int(Input.is_action_pressed("ui_left"))
@@ -34,4 +57,3 @@ func _physics_process(_delta: float) -> void:
 	for i in range(ncols):
 		var c = get_slide_collision(i)
 		emit_signal("pushbody", c.collider_id, movement*speed)
-
