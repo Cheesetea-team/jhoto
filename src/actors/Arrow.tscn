@@ -3,8 +3,7 @@
 [ext_resource path="res://assets/temporales/png/separate/saw.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/Arrow.gd" type="Script" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 23.4222
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Arrow" type="KinematicBody2D"]
 collision_layer = 4
