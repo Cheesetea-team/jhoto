@@ -710,7 +710,7 @@ next_level_scene = "res://src/levels/level_6.tscn"
 position = Vector2( 160, 248 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 7
+frame = 3
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
