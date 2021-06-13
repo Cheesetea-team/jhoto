@@ -5,6 +5,11 @@ export var credits_scene: 	= "res://src/menus/Credits.tscn"
 
 func _ready() -> void:
 	$Boton_jugar.grab_focus()
+	var global = get_node("/root/GlobalGameCounter")
+	if !global:
+		print("Error getting global Game Counter")
+	else:
+		global.stop()
 
 func _on_Boton_jugar_pressed() -> void:
 	$MenuMusic.stop()
