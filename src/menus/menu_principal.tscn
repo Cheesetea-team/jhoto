@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/GUI/boton_jugar_normal.png" type="Texture" id=1]
 [ext_resource path="res://assets/GUI/boton_creditos_normal.png" type="Texture" id=2]
@@ -9,53 +9,72 @@
 [ext_resource path="res://assets/GUI/boton_jugar_seleccion.png" type="Texture" id=7]
 [ext_resource path="res://src/menus/menu_principal.gd" type="Script" id=8]
 
-[node name="Menu" type="TextureRect"]
+[sub_resource type="InputEventAction" id=1]
+action = "continue"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Menu" type="TextureRect" parent="."]
 margin_left = -2.0
 margin_top = -1.0
 margin_right = 1027.0
 margin_bottom = 767.0
+focus_mode = 2
+mouse_filter = 2
+input_pass_on_modal_close_click = false
 texture = ExtResource( 5 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-play_scene = "res://src/levels/level_0.tscn"
 
 [node name="Boton_jugar" type="TextureButton" parent="."]
-margin_left = 362.916
-margin_top = 364.86
-margin_right = 670.916
-margin_bottom = 500.86
+margin_left = 360.916
+margin_top = 363.86
+margin_right = 668.916
+margin_bottom = 499.86
+focus_next = NodePath("../Boton_Creditos")
+focus_previous = NodePath("../Boton_salir")
 shortcut_in_tooltip = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = SubResource( 2 )
 texture_normal = ExtResource( 1 )
-texture_focused = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Boton_Creditos" type="TextureButton" parent="."]
-margin_left = 362.916
-margin_top = 491.86
-margin_right = 670.916
-margin_bottom = 627.86
-shortcut_in_tooltip = false
-texture_normal = ExtResource( 2 )
-texture_focused = ExtResource( 3 )
+texture_hover = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Boton_salir" type="TextureButton" parent="."]
-margin_left = 365.026
-margin_top = 619.736
-margin_right = 673.026
-margin_bottom = 755.736
+margin_left = 363.026
+margin_top = 618.736
+margin_right = 671.026
+margin_bottom = 754.736
+focus_next = NodePath("../Boton_jugar")
+focus_previous = NodePath("../Boton_Creditos")
 texture_normal = ExtResource( 4 )
-texture_focused = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boton_Creditos" type="TextureButton" parent="."]
+margin_left = 360.916
+margin_top = 490.86
+margin_right = 668.916
+margin_bottom = 626.86
+focus_next = NodePath("../Boton_salir")
+focus_previous = NodePath("../Boton_jugar")
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [connection signal="pressed" from="Boton_jugar" to="." method="_on_Boton_jugar_pressed"]
-[connection signal="pressed" from="Boton_Creditos" to="." method="_on_Boton_Creditos_pressed"]
 [connection signal="pressed" from="Boton_salir" to="." method="_on_Boton_salir_pressed"]
+[connection signal="pressed" from="Boton_Creditos" to="." method="_on_Boton_Creditos_pressed"]

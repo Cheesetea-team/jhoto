@@ -50,11 +50,8 @@ points = PoolVector2Array( 64, 96, 0, 96, 0, 32, 64, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 192, 128, 0, 128, 0, 0, 192, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
-
 [sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -65,7 +62,10 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 
-[sub_resource type="TileSet" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="TileSet" id=20]
 0/name = "DungeonColor2@64x64.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -160,14 +160,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 15 )
+6/shape = SubResource( 16 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -181,14 +181,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 16 )
+7/shape = SubResource( 17 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -202,14 +202,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 17 )
+8/shape = SubResource( 18 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
@@ -223,14 +223,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 18 )
+9/shape = SubResource( 19 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
@@ -701,21 +701,21 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 36/navigation_offset = Vector2( 0, 0 )
 36/shape_offset = Vector2( 0, 0 )
 36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-36/shape = SubResource( 20 )
+36/shape = SubResource( 15 )
 36/shape_one_way = false
 36/shape_one_way_margin = 1.0
 36/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 36/z_index = 0
 
 [node name="TileMap" type="TileMap"]
 position = Vector2( 0, 512 )
-tile_set = SubResource( 19 )
+tile_set = SubResource( 20 )
 collision_layer = 8
 collision_mask = 0
 format = 1
@@ -783,7 +783,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 128, 0 )
 
 [node name="AnimatedSprite" parent="Thrower1/Thrower1_1" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower1/Thrower1_1" index="3"]
 wait_time = 2.5
@@ -796,7 +796,7 @@ spawn_offset = Vector2( -64, -24 )
 spawn_velocity = Vector2( 128, 128 )
 
 [node name="AnimatedSprite" parent="Thrower1/Thrower1_2" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower1/Thrower1_2" index="3"]
 wait_time = 2.5
@@ -809,7 +809,7 @@ spawn_offset = Vector2( -64, 24 )
 spawn_velocity = Vector2( 128, -128 )
 
 [node name="AnimatedSprite" parent="Thrower1/Thrower1_3" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower1/Thrower1_3" index="3"]
 wait_time = 2.5
@@ -847,7 +847,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2/Thrower2_1" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower2/Thrower2_1" index="3"]
 wait_time = 2.0
@@ -860,7 +860,7 @@ spawn_offset = Vector2( -64, -32 )
 spawn_velocity = Vector2( 50, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2/Thrower2_2" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower2/Thrower2_2" index="3"]
 wait_time = 2.0
@@ -873,7 +873,7 @@ spawn_offset = Vector2( -64, 32 )
 spawn_velocity = Vector2( -50, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2/Thrower2_3" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower2/Thrower2_3" index="3"]
 wait_time = 2.0
@@ -883,6 +883,9 @@ position = Vector2( 1056, 65 )
 object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
+
+[node name="AnimatedSprite" parent="Thrower3" index="0"]
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower3" index="3"]
 wait_time = 2.5
@@ -894,6 +897,9 @@ object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 312, 0 )
 
+[node name="AnimatedSprite" parent="Thrower5" index="0"]
+frame = 2
+
 [node name="SpawnTimer" parent="Thrower5" index="3"]
 wait_time = 1.0
 
@@ -903,6 +909,9 @@ rotation = -1.57079
 object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, 312 )
+
+[node name="AnimatedSprite" parent="Thrower4" index="0"]
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower4" index="3"]
 wait_time = 2.5
@@ -914,7 +923,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
 
 [node name="AnimatedSprite" parent="Thrower7" index="0"]
-frame = 3
+frame = 1
 
 [node name="SpawnTimer" parent="Thrower7" index="3"]
 wait_time = 2.5
@@ -927,7 +936,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, -312 )
 
 [node name="AnimatedSprite" parent="Thrower8" index="0"]
-frame = 3
+frame = 1
 
 [node name="SpawnTimer" parent="Thrower8" index="3"]
 wait_time = 1.0
@@ -946,8 +955,8 @@ position = Vector2( 1248, -416 )
 
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Thrower1/Thrower1_1"]
