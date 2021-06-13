@@ -679,7 +679,7 @@ __meta__ = {
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
-GoalItems = [ NodePath("../Coin3"), NodePath("../Coin2"), NodePath("../Coin1") ]
+GoalItems = [ NodePath("../Coin3"), NodePath("../Coin2"), NodePath("../Coin1"), NodePath("../Coin4") ]
 next_level_scene = "res://src/levels/level_2.tscn"
 
 [node name="Light_wall" parent="." instance=ExtResource( 5 )]
@@ -697,7 +697,7 @@ sibling_path = NodePath("../Crate2")
 position = Vector2( 223, 261 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 5
+frame = 3
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_top = 128
@@ -715,6 +715,9 @@ sibling_path = NodePath("../Crate")
 
 [node name="Coin3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 800, 232 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 544, 232 )
 
 [node name="Coin2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 672, 416 )
