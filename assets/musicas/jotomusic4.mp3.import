@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jotomusic4.mp3-845098c0eff6eebf9df054efcce837ae.mp3str"
+
+[deps]
+
+source_file="res://assets/musicas/jotomusic4.mp3"
+dest_files=[ "res://.import/jotomusic4.mp3-845098c0eff6eebf9df054efcce837ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
