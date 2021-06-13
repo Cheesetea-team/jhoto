@@ -1,13 +1,6 @@
-[gd_scene load_steps=29 format=2]
+[gd_resource type="TileSet" load_steps=21 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
-[ext_resource path="res://src/actors/Fireball.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/actors/Crate.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/actors/Pillar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -52,7 +45,7 @@ points = PoolVector2Array( 64, 96, 0, 96, 0, 32, 64, 32 )
 points = PoolVector2Array( 192, 128, 0, 128, 0, 0, 192, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -63,7 +56,10 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 
-[sub_resource type="TileSet" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[resource]
 0/name = "DungeonColor2@64x64.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -158,14 +154,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 15 )
+6/shape = SubResource( 16 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -179,14 +175,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 16 )
+7/shape = SubResource( 17 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -200,14 +196,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 17 )
+8/shape = SubResource( 18 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
@@ -221,14 +217,14 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 18 )
+9/shape = SubResource( 19 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
@@ -554,195 +550,173 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 26/z_index = 0
-
-[sub_resource type="GDScript" id=20]
-script/source = "extends StaticActor
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[node name="TileMap2" type="TileMap"]
-position = Vector2( 0, 256 )
-tile_set = SubResource( 19 )
-show_collision = true
-collision_layer = 8
-collision_mask = 0
-format = 1
-tile_data = PoolIntArray( 65535, 6, 0, 1, 26, 0, 4, 26, 0, 7, 8, 0, 196607, 10, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 21, 0, 131081, 26, 0, 131084, 26, 0, 131087, 26, 0, 131089, 8, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 13, 0, 393215, 10, 0, 327681, 0, 0, 327682, 0, 0, 327683, 25, 0, 327684, 25, 0, 327685, 0, 0, 327686, 25, 0, 327687, 25, 0, 327688, 25, 0, 327689, 25, 0, 327690, 19, 0, 327692, 15, 0, 327693, 20, 0, 327695, 0, 0, 327696, 0, 0, 327697, 13, 0, 393217, 0, 0, 393218, 0, 0, 393219, 25, 0, 393220, 25, 0, 393221, 0, 0, 393222, 25, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393231, 0, 0, 393232, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 25, 0, 458756, 25, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 25, 0, 458761, 0, 0, 458762, 13, 0, 458765, 10, 0, 458767, 0, 0, 458768, 0, 0, 589823, 10, 0, 524289, 0, 0, 524290, 0, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 25, 0, 524296, 25, 0, 524297, 0, 0, 524298, 13, 0, 524301, 12, 0, 524303, 15, 0, 524304, 15, 0, 524305, 14, 0, 589825, 0, 0, 589826, 0, 0, 589827, 25, 0, 589828, 25, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 25, 0, 589833, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 25, 0, 655364, 25, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 786431, 12, 0, 720897, 15, 0, 720900, 15, 0, 720903, 15, 0, 720906, 14, 0 )
-
-[node name="LevelCompleteManager" parent="." instance=ExtResource( 8 )]
-position = Vector2( -317.601, -222.097 )
-GoalItems = [ NodePath("../Coins/Coin4"), NodePath("../Coins/Coin3"), NodePath("../Coins/Coin2"), NodePath("../Coins/Coin1") ]
-next_level_num = "09"
-
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 688 )
-
-[node name="Camera2D" parent="Player" index="2"]
-limit_right = 1152
-limit_bottom = 1024
-limit_smoothed = true
-smoothing_speed = 8.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_right = 0.2
-
-[node name="Coins" type="Node2D" parent="."]
-
-[node name="Coin4" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 992, 472 )
-
-[node name="Coin3" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 1056, 352 )
-
-[node name="Coin2" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 480, 480 )
-
-[node name="Coin1" parent="Coins" instance=ExtResource( 5 )]
-position = Vector2( 416, 160 )
-
-[node name="Crates" type="Node2D" parent="."]
-
-[node name="CrateA-1" parent="Crates" instance=ExtResource( 6 )]
-position = Vector2( 96, 448 )
-sibling_path = NodePath("../CrateA-2")
-
-[node name="CrateA-2" parent="Crates" instance=ExtResource( 6 )]
-position = Vector2( 352, 640 )
-sibling_path = NodePath("../CrateA-1")
-
-[node name="Throwers" type="Node2D" parent="."]
-
-[node name="ThrowerLeft" parent="Throwers" instance=ExtResource( 4 )]
-position = Vector2( 32, 256 )
-rotation = 3.14159
-object_trown = ExtResource( 2 )
-spawn_offset = Vector2( -64, 0 )
-spawn_velocity = Vector2( 1000, 0 )
-
-[node name="AnimatedSprite" parent="Throwers/ThrowerLeft" index="0"]
-frame = 2
-
-[node name="SpawnTimer" parent="Throwers/ThrowerLeft" index="3"]
-wait_time = 1.0
-
-[node name="ThrowerRight" parent="Throwers" instance=ExtResource( 4 )]
-position = Vector2( 1120, 320 )
-object_trown = ExtResource( 2 )
-spawn_offset = Vector2( -64, 0 )
-spawn_velocity = Vector2( -350, 0 )
-
-[node name="AnimatedSprite" parent="Throwers/ThrowerRight" index="0"]
-frame = 1
-
-[node name="SpawnTimer" parent="Throwers/ThrowerRight" index="3"]
-wait_time = 1.25
-
-[node name="Pillar" parent="." instance=ExtResource( 7 )]
-position = Vector2( 225.242, 343.188 )
-
-[node name="Pillar2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 224, 409 )
-
-[node name="Pillar3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 224, 472 )
-
-[node name="Pillar4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 224, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 224, 600 )
-script = SubResource( 20 )
-
-[node name="Pillar6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 224, 664 )
-script = SubResource( 20 )
-
-[node name="Pillar7" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 344 )
-script = SubResource( 20 )
-
-[node name="Pillar8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 408 )
-script = SubResource( 20 )
-
-[node name="Pillar9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 472 )
-script = SubResource( 20 )
-
-[node name="Pillar10" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar11" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 600 )
-script = SubResource( 20 )
-
-[node name="Pillar12" parent="." instance=ExtResource( 7 )]
-position = Vector2( 288, 664 )
-script = SubResource( 20 )
-
-[node name="Pillar13" parent="." instance=ExtResource( 7 )]
-position = Vector2( 352, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 416, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar15" parent="." instance=ExtResource( 7 )]
-position = Vector2( 480, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar16" parent="." instance=ExtResource( 7 )]
-position = Vector2( 544, 472 )
-script = SubResource( 20 )
-
-[node name="Pillar17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 544, 536 )
-script = SubResource( 20 )
-
-[node name="Pillar18" parent="." instance=ExtResource( 7 )]
-position = Vector2( 544, 600 )
-script = SubResource( 20 )
-
-[node name="Pillar19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 416, 344 )
-script = SubResource( 20 )
-
-[node name="Pillar20" parent="." instance=ExtResource( 7 )]
-position = Vector2( 416, 408 )
-script = SubResource( 20 )
-
-[node name="Pillar21" parent="." instance=ExtResource( 7 )]
-position = Vector2( 480, 344 )
-script = SubResource( 20 )
-
-[node name="Pillar22" parent="." instance=ExtResource( 7 )]
-position = Vector2( 544, 344 )
-script = SubResource( 20 )
-
-[node name="Pillar23" parent="." instance=ExtResource( 7 )]
-position = Vector2( 608, 344 )
-script = SubResource( 20 )
-
-[connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]
-
-[editable path="Player"]
-[editable path="Throwers/ThrowerLeft"]
-[editable path="Throwers/ThrowerRight"]
+27/name = "DungeonColor2@64x64.png 27"
+27/texture = ExtResource( 1 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 832, 576, 64, 64 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "DungeonColor2@64x64.png 28"
+28/texture = ExtResource( 1 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 896, 576, 64, 64 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "DungeonColor2@64x64.png 29"
+29/texture = ExtResource( 1 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 960, 576, 64, 64 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "DungeonColor2@64x64.png 30"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 832, 640, 64, 64 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "DungeonColor2@64x64.png 31"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 960, 640, 64, 64 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "DungeonColor2@64x64.png 32"
+32/texture = ExtResource( 1 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 832, 704, 64, 64 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+33/name = "DungeonColor2@64x64.png 33"
+33/texture = ExtResource( 1 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 896, 704, 64, 64 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, 0 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape_one_way = false
+33/shape_one_way_margin = 0.0
+33/shapes = [  ]
+33/z_index = 0
+34/name = "DungeonColor2@64x64.png 34"
+34/texture = ExtResource( 1 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 960, 704, 64, 64 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 0, 0 )
+34/navigation_offset = Vector2( 0, 0 )
+34/shape_offset = Vector2( 0, 0 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape_one_way = false
+34/shape_one_way_margin = 0.0
+34/shapes = [  ]
+34/z_index = 0
+35/name = "DungeonColor2@64x64.png 35"
+35/texture = ExtResource( 1 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 832, 576, 192, 192 )
+35/tile_mode = 1
+35/autotile/bitmask_mode = 0
+35/autotile/bitmask_flags = [  ]
+35/autotile/icon_coordinate = Vector2( 0, 0 )
+35/autotile/tile_size = Vector2( 32, 32 )
+35/autotile/spacing = 0
+35/autotile/occluder_map = [  ]
+35/autotile/navpoly_map = [  ]
+35/autotile/priority_map = [  ]
+35/autotile/z_index_map = [  ]
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "DungeonColor2@64x64.png 36"
+36/texture = ExtResource( 1 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 896, 64, 64, 64 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape = SubResource( 15 )
+36/shape_one_way = false
+36/shape_one_way_margin = 1.0
+36/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+36/z_index = 0
+37/name = "DungeonColor2@64x64.png 37"
+37/texture = ExtResource( 1 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 768, 0, 64, 64 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
