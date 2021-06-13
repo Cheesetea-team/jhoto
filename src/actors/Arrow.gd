@@ -7,7 +7,7 @@ export (String) var method_called_on_hit = "on_Arrow_hit"
 ## Hit receiving objects must define on_Arrow_hit() method
 ##
 func _physics_process(_delta: float) -> void:
-	var _err = move_and_slide(linear_velocity)
+	var _err = move_and_slide(linear_velocity,Vector2.ZERO,false,4,0.7853,false)
 	if _notify_hit_objects():
 		queue_free()
 	

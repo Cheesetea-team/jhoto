@@ -41,8 +41,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 21, 22 )
+[sub_resource type="CircleShape2D" id=8]
+radius = 25.0
 
 [node name="Fireball" type="KinematicBody2D"]
 collision_layer = 4
@@ -58,10 +58,11 @@ position = Vector2( 29, -30 )
 rotation = 1.57079
 scale = Vector2( 2.27875, 2.31869 )
 frames = SubResource( 7 )
-frame = 3
+frame = 2
 speed_scale = 5.0
 playing = true
 
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]
 position = Vector2( -9, -31 )
 shape = SubResource( 8 )
+one_way_collision = true

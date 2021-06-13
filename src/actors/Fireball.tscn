@@ -41,7 +41,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="CircleShape2D" id=8]
+radius = 11.0
 
 [node name="Fireball" type="KinematicBody2D"]
 collision_layer = 4
@@ -55,16 +56,11 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 17, -32 )
 rotation = 1.57079
-scale = Vector2( 1, 1 )
 frames = SubResource( 7 )
 speed_scale = 5.0
 playing = true
 
-[node name="sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( -0.611282, -32.0787 )
-scale = Vector2( 0.26453, 0.260345 )
-
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -32 )
 shape = SubResource( 8 )
+one_way_collision = true
