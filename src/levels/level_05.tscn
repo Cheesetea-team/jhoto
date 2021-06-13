@@ -800,7 +800,7 @@ position = Vector2( 224, 248 )
 z_index = 1
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 2
+frame = 3
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -829,6 +829,9 @@ sibling_path = NodePath("../Crate")
 [node name="Light_wall" parent="." instance=ExtResource( 7 )]
 position = Vector2( 384, -304 )
 
+[node name="AnimatedSprite" parent="Light_wall" index="2"]
+frame = 5
+
 [node name="Light_wall2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 616, -32 )
 rotation = 1.57079
@@ -847,7 +850,8 @@ position = Vector2( 543, 24 )
 z_index = 1024
 texture = ExtResource( 6 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
+[editable path="Light_wall"]

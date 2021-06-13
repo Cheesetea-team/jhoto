@@ -591,6 +591,9 @@ next_level_num = "09"
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 688 )
 
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 0
+
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1152
 limit_bottom = 1024
@@ -634,7 +637,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 1000, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/ThrowerLeft" index="0"]
-frame = 2
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/ThrowerLeft" index="3"]
 wait_time = 1.0
@@ -646,7 +649,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -350, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/ThrowerRight" index="0"]
-frame = 1
+frame = 2
 
 [node name="SpawnTimer" parent="Throwers/ThrowerRight" index="3"]
 wait_time = 1.25
