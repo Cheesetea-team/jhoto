@@ -574,6 +574,9 @@ next_level_scene = "res://src/levels/level_5.tscn"
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 224, 248 )
 
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 6
+
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
 
@@ -611,7 +614,7 @@ object_trown = ExtResource( 6 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 400, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]

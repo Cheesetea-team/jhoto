@@ -26,20 +26,30 @@ margin_left = 362.916
 margin_top = 364.86
 margin_right = 670.916
 margin_bottom = 500.86
+focus_neighbour_top = NodePath("../Boton_salir")
+focus_neighbour_bottom = NodePath("../Boton_Creditos")
+focus_next = NodePath("../Boton_Creditos")
+focus_previous = NodePath("../Boton_salir")
 shortcut_in_tooltip = false
 texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 7 )
 texture_focused = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Boton_Creditos" type="TextureButton" parent="."]
-margin_left = 362.916
+margin_left = 364.33
 margin_top = 491.86
-margin_right = 670.916
+margin_right = 672.33
 margin_bottom = 627.86
+focus_neighbour_top = NodePath("../Boton_jugar")
+focus_neighbour_bottom = NodePath("../Boton_salir")
+focus_next = NodePath("../Boton_salir")
+focus_previous = NodePath("../Boton_jugar")
 shortcut_in_tooltip = false
 texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
 texture_focused = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -50,7 +60,12 @@ margin_left = 365.026
 margin_top = 619.736
 margin_right = 673.026
 margin_bottom = 755.736
+focus_neighbour_top = NodePath("../Boton_Creditos")
+focus_neighbour_bottom = NodePath("../Boton_jugar")
+focus_next = NodePath("../Boton_jugar")
+focus_previous = NodePath("../Boton_Creditos")
 texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 6 )
 texture_focused = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -60,6 +75,9 @@ __meta__ = {
 stream = ExtResource( 9 )
 autoplay = true
 
+[connection signal="mouse_entered" from="Boton_jugar" to="." method="_on_Boton_jugar_mouse_entered"]
 [connection signal="pressed" from="Boton_jugar" to="." method="_on_Boton_jugar_pressed"]
+[connection signal="mouse_entered" from="Boton_Creditos" to="." method="_on_Boton_Creditos_mouse_entered"]
 [connection signal="pressed" from="Boton_Creditos" to="." method="_on_Boton_Creditos_pressed"]
+[connection signal="mouse_entered" from="Boton_salir" to="." method="_on_Boton_salir_mouse_entered"]
 [connection signal="pressed" from="Boton_salir" to="." method="_on_Boton_salir_pressed"]
