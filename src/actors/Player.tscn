@@ -212,7 +212,7 @@ position = Vector2( -1, -47.625 )
 scale = Vector2( 2.61538, 2.46528 )
 frames = SubResource( 37 )
 animation = "level_enter"
-frame = 8
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
