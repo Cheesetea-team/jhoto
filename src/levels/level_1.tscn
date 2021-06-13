@@ -686,7 +686,7 @@ next_level_scene = "res://src/levels/level_2.tscn"
 position = Vector2( 223, 261 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 4
+frame = 7
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_top = 128

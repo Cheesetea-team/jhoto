@@ -572,7 +572,7 @@ next_level_scene = "res://src/levels/level_7.tscn"
 position = Vector2( 160, 688 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 8
+frame = 2
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1152
@@ -634,8 +634,8 @@ frame = 1
 [node name="SpawnTimer" parent="Throwers/ThrowerRight" index="3"]
 wait_time = 1.25
 
-[connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Throwers/ThrowerLeft"]
