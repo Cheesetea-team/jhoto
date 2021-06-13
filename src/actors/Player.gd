@@ -14,14 +14,16 @@ func _ready() -> void:
 # Hit by an arrow (to be called directly)
 func on_Arrow_hit():
 	_disable_player()
-	$AnimatedSprite.connect("animation_finished", self, "_reset_player")
+	if !$AnimatedSprite.is_connected("animation_finished", self, "_reset_player"):	
+		$AnimatedSprite.connect("animation_finished", self, "_reset_player")
 	$AnimatedSprite.playing = true
 	$AnimatedSprite.animation = "dead"
 	$deathSound.play()
 
 func _reset_player():
 	global_position = initial_position
-	$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
+	if $AnimatedSprite.is_connected("animation_finished", self, "_reset_player"):	
+		$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
 	_enable_player()
 	# Entry level animation
 	
