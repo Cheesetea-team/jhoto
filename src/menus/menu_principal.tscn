@@ -20,7 +20,6 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-play_scene = "res://src/levels/level_0.tscn"
 
 [node name="Boton_jugar" type="TextureButton" parent="."]
 margin_left = 362.916
