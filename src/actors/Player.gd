@@ -14,14 +14,16 @@ func _ready() -> void:
 # Hit by an arrow (to be called directly)
 func on_Arrow_hit():
 	_disable_player()
-	$AnimatedSprite.connect("animation_finished", self, "_reset_player")
+	if !$AnimatedSprite.is_connected("animation_finished", self, "_reset_player"):	
+		$AnimatedSprite.connect("animation_finished", self, "_reset_player")
 	$AnimatedSprite.playing = true
 	$AnimatedSprite.animation = "dead"
 	$deathSound.play()
 
 func _reset_player():
 	global_position = initial_position
-	$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
+	if $AnimatedSprite.is_connected("animation_finished", self, "_reset_player"):	
+		$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
 	_enable_player()
 	# Entry level animation
 	
@@ -82,7 +84,8 @@ func on_animation_end():
 	if $AnimatedSprite.animation == "level_enter":
 		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.playing = false
-		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+		if ($AnimatedSprite.is_connected("animation_finished", self, "on_animation_end")):
+			$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
 		self._enable_player()
 
 func exit_level():
@@ -99,7 +102,8 @@ func exit_level():
 	animating = true
 	
 	#Disconnect event
-	$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+	if ($AnimatedSprite.is_connected("animation_finished", self, "on_animation_end")):
+		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
 	
 	# Notify when the anim ends
 	var level_manager = get_parent().get_node("LevelCompleteManager")
