@@ -1,6 +1,6 @@
 extends TextureRect
 
-export var play_scene: 		= "res://src/levels/level_0.tscn"
+export var play_scene: 		= "res://src/menus/controls.tscn"
 export var credits_scene: 	= "res://src/menus/Credits.tscn"
 
 func _on_Boton_jugar_pressed() -> void:
