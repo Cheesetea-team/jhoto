@@ -17,7 +17,7 @@ func on_Arrow_hit():
 	$AnimatedSprite.connect("animation_finished", self, "_reset_player")
 	$AnimatedSprite.playing = true
 	$AnimatedSprite.animation = "dead"
-	$AudioStreamPlayer.play()
+	$deathSound.play()
 
 func _reset_player():
 	global_position = initial_position
@@ -39,6 +39,7 @@ func _disable_player():
 	$CollisionShape2D.disabled = true
 
 func init_entry_anim():
+	$levelEntrySound.play()
 	animating = true
 	$AnimatedSprite.animation = "level_enter"
 	$AnimatedSprite.playing = true
@@ -77,10 +78,31 @@ func _physics_process(_delta: float) -> void:
 		emit_signal("pushbody", c.collider_id, movement*speed)
 
 func on_animation_end():
-	print("end anim")
 	animating = false
 	if $AnimatedSprite.animation == "level_enter":
 		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.playing = false
 		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
 		self._enable_player()
+
+func exit_level():
+	# Disable movement	
+	self._disable_player()
+	
+	# Start animation
+	$AnimatedSprite.playing = false
+	$AnimatedSprite.animation = "level_exit"
+	$AnimatedSprite.playing = true
+	$levelExitSound.play()
+	
+	# Set the flag that prevents anim change
+	animating = true
+	
+	#Disconnect event
+	$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+	
+	# Notify when the anim ends
+	var level_manager = get_parent().get_node("LevelCompleteManager")
+	if(level_manager != null):
+		$AnimatedSprite.connect("animation_finished", level_manager, "end_change_level")
+	
