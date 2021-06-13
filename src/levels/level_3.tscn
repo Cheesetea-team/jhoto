@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/levels/elements/Light_wall_small.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/map/elements/pillar.png" type="Texture" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -799,7 +800,7 @@ position = Vector2( 224, 248 )
 z_index = 1
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 8
+frame = 4
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -834,14 +835,19 @@ rotation = 1.57079
 
 [node name="GoalItem" parent="." instance=ExtResource( 6 )]
 position = Vector2( 224, -96 )
-z_index = 1
+z_index = 904
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 24 )
 format = 1
 tile_data = PoolIntArray( -262142, 0, 0, -196606, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -131070, 0, 0, -131068, 0, 0, -131066, 0, 0, -131065, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[node name="Pillar" type="Sprite" parent="."]
+position = Vector2( 543, 24 )
+z_index = 1024
+texture = ExtResource( 7 )
+
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
