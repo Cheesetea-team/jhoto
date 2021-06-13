@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/actors/LevelCompleteMgr.gd" type="Script" id=1]
-[ext_resource path="res://assets/musicas/jotomusic1.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/musicas/jotomusic4.mp3" type="AudioStream" id=2]
 
 [node name="LevelCompleteManager" type="Node2D"]
 script = ExtResource( 1 )
