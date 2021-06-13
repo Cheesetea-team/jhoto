@@ -713,7 +713,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 } ]
 36/z_index = 0
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 position = Vector2( 0, 512 )
 tile_set = SubResource( 20 )
 collision_layer = 8
@@ -884,8 +884,8 @@ object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, 600 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]
 

@@ -554,7 +554,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 } ]
 26/z_index = 0
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 position = Vector2( 0, 256 )
 tile_set = SubResource( 19 )
 show_collision = true
@@ -634,8 +634,8 @@ frame = 1
 [node name="SpawnTimer" parent="Throwers/ThrowerRight" index="3"]
 wait_time = 1.25
 
-[connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Throwers/ThrowerLeft"]
