@@ -82,7 +82,8 @@ func on_animation_end():
 	if $AnimatedSprite.animation == "level_enter":
 		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.playing = false
-		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+		if ($AnimatedSprite.is_connected("animation_finished", self, "on_animation_end")):
+			$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
 		self._enable_player()
 
 func exit_level():
@@ -99,7 +100,8 @@ func exit_level():
 	animating = true
 	
 	#Disconnect event
-	$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+	if ($AnimatedSprite.is_connected("animation_finished", self, "on_animation_end")):
+		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
 	
 	# Notify when the anim ends
 	var level_manager = get_parent().get_node("LevelCompleteManager")
