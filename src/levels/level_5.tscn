@@ -689,7 +689,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 35/shapes = [  ]
 35/z_index = 0
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 position = Vector2( 0, 512 )
 tile_set = SubResource( 19 )
 collision_layer = 8

@@ -3,7 +3,7 @@ extends Node2D
 export (Array, NodePath) var GoalItems = []
 export (String) var next_level_scene = null
 var aliveGoalItems: Array = []
-var next_level = null
+#var next_level = null
 var ending_level = false
 
 func _ready() -> void:
@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 	var nitems = aliveGoalItems.size()
 	if nitems == 0 && !ending_level:
 		if next_level_scene:
-			init_change_level(next_level_scene)
+			init_change_level()
 		else:
 			get_tree().quit(0)
 		
@@ -29,9 +29,7 @@ func _process(_delta: float) -> void:
 			i += 1
 
 # Init change level
-func init_change_level(next_level_scene):
-	# Set the next level instance
-	next_level = next_level_scene
+func init_change_level():
 	# Try to notify the user
 	var pl = get_parent().get_node("Player")
 	if pl != null:
@@ -44,9 +42,5 @@ func init_change_level(next_level_scene):
 
 # This actually changes the level
 func end_change_level():
-	if get_tree().change_scene(next_level) != OK:
+	if get_tree().change_scene(next_level_scene) != OK:
 		print("Can't change scene!")
-#func _on_Portal_body_entered(body):
-#	if body.name == "Player":
-#		get_tree().change_scene("res://src/levels/"+escena+".tscn")
-#	pass # Replace with function body.
