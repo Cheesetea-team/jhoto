@@ -12,41 +12,40 @@
 [node name="Creditos" type="CanvasLayer"]
 script = ExtResource( 5 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 512.359, 159.706 )
-z_index = 3
-texture = ExtResource( 6 )
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-layer = 10
-
-[node name="Starfield" type="ParallaxLayer" parent="ParallaxBackground"]
-script = ExtResource( 3 )
-velocidad = 200
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/Starfield"]
-position = Vector2( 519, 490 )
-scale = Vector2( 1.04032, 1.03727 )
-texture = ExtResource( 1 )
-
-[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Starfield"]
-position = Vector2( 518, -533 )
-scale = Vector2( 1.04032, 1.03727 )
-texture = ExtResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="DarkBg" type="Sprite" parent="."]
 position = Vector2( 512, 511.75 )
 scale = Vector2( 0.5, 1024.5 )
 texture = SubResource( 1 )
 
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-layer = 20
+[node name="CreditsParallax" type="ParallaxBackground" parent="."]
+layer = 2
 
-[node name="Creditos" type="ParallaxLayer" parent="ParallaxBackground2"]
+[node name="Creditos" type="ParallaxLayer" parent="CreditsParallax"]
 script = ExtResource( 4 )
 velocidad = 40
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground2/Creditos"]
-position = Vector2( 515, 1057 )
+[node name="CreditsSprite" type="Sprite" parent="CreditsParallax/Creditos"]
+position = Vector2( 515, 1300 )
 scale = Vector2( 1.04032, 1.03727 )
 texture = ExtResource( 2 )
+
+[node name="JhotoSprite" type="Sprite" parent="CreditsParallax"]
+position = Vector2( 512.359, 159.706 )
+texture = ExtResource( 6 )
+
+[node name="StarfieldParallax" type="ParallaxBackground" parent="."]
+layer = 3
+
+[node name="Starfield" type="ParallaxLayer" parent="StarfieldParallax"]
+script = ExtResource( 3 )
+velocidad = 200
+
+[node name="Stars0" type="Sprite" parent="StarfieldParallax/Starfield"]
+position = Vector2( 519, 490 )
+scale = Vector2( 1.04032, 1.03727 )
+texture = ExtResource( 1 )
+
+[node name="Stars1" type="Sprite" parent="StarfieldParallax/Starfield"]
+position = Vector2( 518, -533 )
+scale = Vector2( 1.04032, 1.03727 )
+texture = ExtResource( 1 )

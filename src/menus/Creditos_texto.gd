@@ -9,4 +9,6 @@ func _ready():
 
 func _process(delta):
 	offset -= velocidad * delta
+	if offset < -1800:
+		offset = 0
 	motion_offset  = Vector2(0,offset)
