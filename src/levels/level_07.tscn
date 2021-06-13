@@ -709,6 +709,9 @@ next_level_num = "08"
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 160, 248 )
 
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 0
+
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
 
@@ -739,9 +742,6 @@ object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
 
-[node name="AnimatedSprite" parent="Thrower1_1" index="0"]
-frame = 2
-
 [node name="SpawnTimer" parent="Thrower1_1" index="3"]
 wait_time = 2.5
 
@@ -751,9 +751,6 @@ object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, -24 )
 spawn_velocity = Vector2( -128, -128 )
 
-[node name="AnimatedSprite" parent="Thrower1_2" index="0"]
-frame = 2
-
 [node name="SpawnTimer" parent="Thrower1_2" index="3"]
 wait_time = 2.5
 
@@ -762,9 +759,6 @@ position = Vector2( 735, 225 )
 object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 24 )
 spawn_velocity = Vector2( -128, 128 )
-
-[node name="AnimatedSprite" parent="Thrower1_3" index="0"]
-frame = 2
 
 [node name="SpawnTimer" parent="Thrower1_3" index="3"]
 wait_time = 2.5
@@ -776,9 +770,6 @@ object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, -128 )
 
-[node name="AnimatedSprite" parent="Thrower2_1" index="0"]
-frame = 2
-
 [node name="SpawnTimer" parent="Thrower2_1" index="3"]
 wait_time = 2.0
 
@@ -788,9 +779,6 @@ rotation = 1.57079
 object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, -32 )
 spawn_velocity = Vector2( 50, -128 )
-
-[node name="AnimatedSprite" parent="Thrower2_2" index="0"]
-frame = 2
 
 [node name="SpawnTimer" parent="Thrower2_2" index="3"]
 wait_time = 2.0
@@ -802,9 +790,6 @@ object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 32 )
 spawn_velocity = Vector2( -50, -128 )
 
-[node name="AnimatedSprite" parent="Thrower2_3" index="0"]
-frame = 2
-
 [node name="SpawnTimer" parent="Thrower2_3" index="3"]
 wait_time = 2.0
 
@@ -815,7 +800,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
 
 [node name="AnimatedSprite" parent="Thrower3" index="0"]
-frame = 3
+frame = 1
 
 [node name="SpawnTimer" parent="Thrower3" index="3"]
 wait_time = 2.5
@@ -828,7 +813,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 312, 0 )
 
 [node name="AnimatedSprite" parent="Thrower5" index="0"]
-frame = 3
+frame = 1
 
 [node name="SpawnTimer" parent="Thrower5" index="3"]
 wait_time = 1.0
@@ -840,13 +825,13 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
 
 [node name="AnimatedSprite" parent="Thrower4" index="0"]
-frame = 3
+frame = 1
 
 [node name="SpawnTimer" parent="Thrower4" index="3"]
 wait_time = 2.5
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Thrower1_1"]
