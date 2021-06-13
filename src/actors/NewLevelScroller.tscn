@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/actors/NewLevelScroller.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/GUI/Alkhemikal.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+outline_size = 1
+font_data = SubResource( 2 )
+
+[node name="NewLevelScroller" type="CanvasLayer"]
+script = ExtResource( 1 )
+scroll_speed = Vector2( -750, 0 )
+
+[node name="NewLevelLabel" type="Label" parent="."]
+margin_left = -144.0
+margin_top = -40.0
+margin_right = 146.0
+margin_bottom = 40.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.0352941, 0.498039, 0.615686, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 2
+text = "LEVEL 01"
+__meta__ = {
+"_edit_use_anchors_": false
+}
