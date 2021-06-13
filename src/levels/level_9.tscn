@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/Fireball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/actors/Pillar.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -554,6 +555,25 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 } ]
 26/z_index = 0
 
+[sub_resource type="GDScript" id=20]
+script/source = "extends StaticActor
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
 [node name="TileMap" type="TileMap"]
 position = Vector2( 0, 256 )
 tile_set = SubResource( 19 )
@@ -561,7 +581,7 @@ show_collision = true
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 65536, 25, 0, 65537, 25, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65541, 25, 0, 65542, 25, 0, 65543, 25, 0, 131072, 25, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 25, 0, 196608, 25, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 25, 0, 196616, 25, 0, 196617, 25, 0, 196618, 25, 0, 196619, 25, 0, 196620, 25, 0, 196621, 25, 0, 196622, 25, 0, 196623, 25, 0, 196624, 25, 0, 196625, 25, 0, 262144, 25, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 25, 0, 327680, 25, 0, 327681, 0, 0, 327682, 0, 0, 327683, 25, 0, 327684, 25, 0, 327685, 0, 0, 327686, 25, 0, 327687, 25, 0, 327688, 25, 0, 327689, 25, 0, 327690, 25, 0, 327691, 25, 0, 327692, 25, 0, 327693, 25, 0, 327694, 25, 0, 327695, 0, 0, 327696, 0, 0, 327697, 25, 0, 393216, 25, 0, 393217, 0, 0, 393218, 0, 0, 393219, 25, 0, 393220, 25, 0, 393221, 0, 0, 393222, 25, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 25, 0, 393230, 25, 0, 393231, 0, 0, 393232, 0, 0, 393233, 25, 0, 458752, 25, 0, 458753, 0, 0, 458754, 0, 0, 458755, 25, 0, 458756, 25, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 25, 0, 458761, 0, 0, 458762, 25, 0, 458766, 25, 0, 458767, 0, 0, 458768, 0, 0, 458769, 25, 0, 524288, 25, 0, 524289, 0, 0, 524290, 0, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 25, 0, 524296, 25, 0, 524297, 0, 0, 524298, 25, 0, 524302, 25, 0, 524303, 25, 0, 524304, 25, 0, 524305, 25, 0, 589824, 25, 0, 589825, 0, 0, 589826, 0, 0, 589827, 25, 0, 589828, 25, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 25, 0, 589833, 0, 0, 589834, 25, 0, 655360, 25, 0, 655361, 0, 0, 655362, 0, 0, 655363, 25, 0, 655364, 25, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 25, 0, 720896, 25, 0, 720897, 25, 0, 720898, 25, 0, 720899, 25, 0, 720900, 25, 0, 720901, 25, 0, 720902, 25, 0, 720903, 25, 0, 720904, 25, 0, 720905, 25, 0, 720906, 25, 0 )
+tile_data = PoolIntArray( 65535, 6, 0, 1, 26, 0, 4, 26, 0, 7, 8, 0, 196607, 10, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 21, 0, 131081, 26, 0, 131084, 26, 0, 131087, 26, 0, 131089, 8, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 13, 0, 393215, 10, 0, 327681, 0, 0, 327682, 0, 0, 327683, 25, 0, 327684, 25, 0, 327685, 0, 0, 327686, 25, 0, 327687, 25, 0, 327688, 25, 0, 327689, 25, 0, 327690, 19, 0, 327692, 15, 0, 327693, 20, 0, 327695, 0, 0, 327696, 0, 0, 327697, 13, 0, 393217, 0, 0, 393218, 0, 0, 393219, 25, 0, 393220, 25, 0, 393221, 0, 0, 393222, 25, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393231, 0, 0, 393232, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 25, 0, 458756, 25, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 25, 0, 458761, 0, 0, 458762, 13, 0, 458765, 10, 0, 458767, 0, 0, 458768, 0, 0, 589823, 10, 0, 524289, 0, 0, 524290, 0, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 25, 0, 524296, 25, 0, 524297, 0, 0, 524298, 13, 0, 524301, 12, 0, 524303, 15, 0, 524304, 15, 0, 524305, 14, 0, 589825, 0, 0, 589826, 0, 0, 589827, 25, 0, 589828, 25, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 25, 0, 589833, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 25, 0, 655364, 25, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 786431, 12, 0, 720897, 15, 0, 720900, 15, 0, 720903, 15, 0, 720906, 14, 0 )
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
@@ -572,7 +592,7 @@ next_level_scene = "res://src/levels/level_7.tscn"
 position = Vector2( 160, 688 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 8
+frame = 6
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1152
@@ -616,9 +636,6 @@ object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 1000, 0 )
 
-[node name="AnimatedSprite" parent="Throwers/ThrowerLeft" index="0"]
-frame = 2
-
 [node name="SpawnTimer" parent="Throwers/ThrowerLeft" index="3"]
 wait_time = 1.0
 
@@ -629,10 +646,99 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -350, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/ThrowerRight" index="0"]
-frame = 1
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/ThrowerRight" index="3"]
 wait_time = 1.25
+
+[node name="Pillar" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225.242, 343.188 )
+
+[node name="Pillar2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 409 )
+
+[node name="Pillar3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 472 )
+
+[node name="Pillar4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 600 )
+script = SubResource( 20 )
+
+[node name="Pillar6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 224, 664 )
+script = SubResource( 20 )
+
+[node name="Pillar7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 344 )
+script = SubResource( 20 )
+
+[node name="Pillar8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 408 )
+script = SubResource( 20 )
+
+[node name="Pillar9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 472 )
+script = SubResource( 20 )
+
+[node name="Pillar10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 600 )
+script = SubResource( 20 )
+
+[node name="Pillar12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 664 )
+script = SubResource( 20 )
+
+[node name="Pillar13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 352, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar14" parent="." instance=ExtResource( 8 )]
+position = Vector2( 416, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar15" parent="." instance=ExtResource( 8 )]
+position = Vector2( 480, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar16" parent="." instance=ExtResource( 8 )]
+position = Vector2( 544, 472 )
+script = SubResource( 20 )
+
+[node name="Pillar17" parent="." instance=ExtResource( 8 )]
+position = Vector2( 544, 536 )
+script = SubResource( 20 )
+
+[node name="Pillar18" parent="." instance=ExtResource( 8 )]
+position = Vector2( 544, 600 )
+script = SubResource( 20 )
+
+[node name="Pillar19" parent="." instance=ExtResource( 8 )]
+position = Vector2( 416, 344 )
+script = SubResource( 20 )
+
+[node name="Pillar20" parent="." instance=ExtResource( 8 )]
+position = Vector2( 416, 408 )
+script = SubResource( 20 )
+
+[node name="Pillar21" parent="." instance=ExtResource( 8 )]
+position = Vector2( 480, 344 )
+script = SubResource( 20 )
+
+[node name="Pillar22" parent="." instance=ExtResource( 8 )]
+position = Vector2( 544, 344 )
+script = SubResource( 20 )
+
+[node name="Pillar23" parent="." instance=ExtResource( 8 )]
+position = Vector2( 608, 344 )
+script = SubResource( 20 )
 
 [connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]

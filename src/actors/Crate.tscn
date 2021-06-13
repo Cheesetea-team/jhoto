@@ -47,5 +47,6 @@ stream = ExtResource( 3 )
 [node name="Marker" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -32 )
 frames = SubResource( 5 )
+frame = 1
 speed_scale = 2.0
 playing = true

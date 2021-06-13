@@ -585,7 +585,7 @@ energy = 2.6
 range_z_max = 4000
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 8
+frame = 7
 
 [node name="CollisionShape2D" parent="Player" index="2"]
 position = Vector2( 1, -21 )
