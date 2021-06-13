@@ -727,7 +727,7 @@ tile_data = PoolIntArray( -589826, 6, 0, -655360, 26, 0, -655357, 26, 0, -655354
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 7 )]
 position = Vector2( -185.133, -628.125 )
 GoalItems = [ NodePath("../GoalItem"), NodePath("../GoalItem2"), NodePath("../GoalItem3"), NodePath("../GoalItem4"), NodePath("../GoalItem5") ]
-next_level_num = "12"
+next_level_num = "end"
 
 [node name="Pillar" parent="." instance=ExtResource( 9 )]
 position = Vector2( 288, -488 )
@@ -754,7 +754,7 @@ position = Vector2( 1056, -488 )
 position = Vector2( 96, 1 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 7
+frame = 8
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
