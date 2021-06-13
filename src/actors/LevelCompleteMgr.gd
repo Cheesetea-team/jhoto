@@ -11,6 +11,10 @@ func _process(_delta: float) -> void:
 	var nitems = aliveGoalItems.size()
 	if nitems == 0:
 		if next_level_scene:
+			var pl = get_parent().get_node("Player")
+			if pl != null:
+				pl._reset_player()
+				pl._disable_player()
 			if get_tree().change_scene(next_level_scene) != OK:
 				print("Can't change scene!")
 		else:
