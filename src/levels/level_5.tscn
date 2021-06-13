@@ -710,7 +710,7 @@ next_level_scene = "res://src/levels/level_6.tscn"
 position = Vector2( 160, 248 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 7
+frame = 3
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -839,8 +839,8 @@ spawn_velocity = Vector2( -128, 0 )
 [node name="SpawnTimer" parent="Thrower4" index="3"]
 wait_time = 2.5
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Thrower1_1"]

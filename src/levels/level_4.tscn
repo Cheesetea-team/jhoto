@@ -5,7 +5,7 @@
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=5]
-[ext_resource path="res://src/actors/BigFireball.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/actors/BigFireballLight.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/light_halo.png" type="Texture" id=8]
 
@@ -585,7 +585,7 @@ energy = 2.6
 range_z_max = 4000
 
 [node name="AnimatedSprite" parent="Player" index="1"]
-frame = 6
+frame = 5
 
 [node name="CollisionShape2D" parent="Player" index="2"]
 position = Vector2( 1, -21 )

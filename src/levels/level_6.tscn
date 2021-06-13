@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/Fireball.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/actors/BigFireball.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/map/elements/pillar.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -554,6 +555,174 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 26/z_index = 0
+27/name = "DungeonColor2@64x64.png 27"
+27/texture = ExtResource( 1 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 832, 576, 64, 64 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "DungeonColor2@64x64.png 28"
+28/texture = ExtResource( 1 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 896, 576, 64, 64 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "DungeonColor2@64x64.png 29"
+29/texture = ExtResource( 1 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 960, 576, 64, 64 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "DungeonColor2@64x64.png 30"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 832, 640, 64, 64 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "DungeonColor2@64x64.png 31"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 960, 640, 64, 64 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "DungeonColor2@64x64.png 32"
+32/texture = ExtResource( 1 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 832, 704, 64, 64 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+33/name = "DungeonColor2@64x64.png 33"
+33/texture = ExtResource( 1 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 896, 704, 64, 64 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, 0 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape_one_way = false
+33/shape_one_way_margin = 0.0
+33/shapes = [  ]
+33/z_index = 0
+34/name = "DungeonColor2@64x64.png 34"
+34/texture = ExtResource( 1 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 960, 704, 64, 64 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 0, 0 )
+34/navigation_offset = Vector2( 0, 0 )
+34/shape_offset = Vector2( 0, 0 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape_one_way = false
+34/shape_one_way_margin = 0.0
+34/shapes = [  ]
+34/z_index = 0
+35/name = "DungeonColor2@64x64.png 35"
+35/texture = ExtResource( 1 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 768, 512, 64, 64 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "DungeonColor2@64x64.png 36"
+36/texture = ExtResource( 1 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 704, 512, 64, 64 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "DungeonColor2@64x64.png 37"
+37/texture = ExtResource( 1 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 704, 448, 64, 64 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "DungeonColor2@64x64.png 38"
+38/texture = ExtResource( 1 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 768, 448, 64, 64 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
 
 [node name="TileMap2" type="TileMap"]
 position = Vector2( 0, 256 )
@@ -562,7 +731,7 @@ show_collision = true
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -131073, 6, 0, -196607, 7, 0, -196606, 9, 0, -196604, 7, 0, -196603, 8, 0, -196599, 25, 0, -196598, 25, 0, -196597, 25, 0, -196596, 25, 0, -196595, 25, 0, -131063, 25, 0, -131062, 25, 0, -131061, 0, 0, -131060, 25, 0, -131059, 25, 0, -1, 10, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65527, 25, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 25, 0, 65535, 10, 0, 1, 0, 0, 2, 25, 0, 3, 25, 0, 4, 25, 0, 9, 25, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 25, 0, 65537, 0, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65545, 25, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 25, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 25, 0, 131077, 25, 0, 131078, 25, 0, 131079, 25, 0, 131080, 25, 0, 131081, 25, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 25, 0, 262143, 10, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 25, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 19, 0, 262150, 25, 0, 262151, 25, 0, 262152, 25, 0, 262153, 25, 0, 262154, 0, 0, 262155, 25, 0, 262156, 0, 0, 262157, 25, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327689, 25, 0, 327690, 0, 0, 327691, 25, 0, 327692, 0, 0, 327693, 25, 0, 458751, 12, 0, 393217, 15, 0, 393220, 14, 0, 393225, 25, 0, 393226, 25, 0, 393227, 25, 0, 393228, 25, 0, 393229, 25, 0, 655372, 0, 0 )
+tile_data = PoolIntArray( -262146, 18, 0, -262145, 18, 0, -327680, 18, 0, -327679, 18, 0, -327678, 18, 0, -327677, 18, 0, -327676, 18, 0, -327675, 18, 0, -327674, 18, 0, -327673, 37, 0, -327672, 33, 0, -327671, 33, 0, -327670, 33, 0, -327669, 33, 0, -327668, 33, 0, -327667, 33, 0, -327666, 33, 0, -327665, 38, 0, -196610, 37, 0, -196609, 33, 0, -262144, 33, 0, -262143, 33, 0, -262142, 33, 0, -262141, 33, 0, -262140, 33, 0, -262139, 33, 0, -262138, 33, 0, -262137, 18, 0, -262136, 6, 0, -262134, 7, 0, -262132, 7, 0, -262131, 8, 0, -262129, 30, 0, -131074, 31, 0, -131073, 6, 0, -196607, 7, 0, -196606, 9, 0, -196604, 7, 0, -196603, 8, 0, -196601, 18, 0, -196593, 30, 0, -65538, 31, 0, -131065, 18, 0, -131064, 10, 0, -131062, 25, 0, -131061, 0, 0, -131060, 25, 0, -131059, 13, 0, -131057, 30, 0, -2, 31, 0, -1, 10, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 13, 0, -65529, 18, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65521, 30, 0, 65534, 31, 0, 65535, 10, 0, 1, 0, 0, 2, 25, 0, 3, 25, 0, 4, 25, 0, 5, 13, 0, 7, 33, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 15, 30, 0, 131070, 31, 0, 65537, 0, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65541, 21, 0, 65543, 7, 0, 65544, 22, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 13, 0, 65551, 30, 0, 196606, 31, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 25, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131087, 30, 0, 262142, 31, 0, 262143, 10, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196623, 30, 0, 327678, 31, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 19, 0, 262150, 15, 0, 262151, 15, 0, 262152, 20, 0, 262154, 0, 0, 262155, 25, 0, 262156, 0, 0, 262157, 13, 0, 262159, 30, 0, 393214, 31, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327690, 0, 0, 327691, 25, 0, 327692, 0, 0, 327695, 30, 0, 458750, 31, 0, 458751, 12, 0, 393217, 15, 0, 393220, 14, 0, 393222, 27, 0, 393223, 29, 0, 393224, 12, 0, 393226, 15, 0, 393229, 14, 0, 393231, 30, 0, 524286, 31, 0, 458758, 30, 0, 458759, 31, 0, 458767, 30, 0, 589822, 36, 0, 589823, 28, 0, 524288, 28, 0, 524289, 28, 0, 524290, 28, 0, 524291, 28, 0, 524292, 28, 0, 524293, 28, 0, 524294, 35, 0, 524295, 36, 0, 524296, 28, 0, 524297, 28, 0, 524298, 28, 0, 524299, 28, 0, 524300, 28, 0, 524301, 28, 0, 524302, 28, 0, 524303, 35, 0 )
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
@@ -573,7 +742,7 @@ next_level_scene = "res://src/levels/level_7.tscn"
 position = Vector2( 800, 368 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 2
+frame = 6
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 1024
@@ -591,6 +760,7 @@ position = Vector2( 736, -96 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 6 )]
 position = Vector2( 224, 344 )
+z_index = 1344
 
 [node name="Coin1" parent="Coins" instance=ExtResource( 6 )]
 position = Vector2( 288, -40 )
@@ -649,8 +819,53 @@ spawn_velocity = Vector2( 200, 0 )
 [node name="SpawnTimer" parent="Throwers/Thrower4" index="3"]
 wait_time = 1.25
 
-[connection signal="pushbody" from="Player" to="Crates/Crate2" method="_on_Player_pushbody"]
+[node name="Pillar" type="Sprite" parent="."]
+position = Vector2( 736, 280 )
+z_index = 1280
+texture = ExtResource( 9 )
+
+[node name="Pillar2" type="Sprite" parent="."]
+position = Vector2( 736, 344 )
+z_index = 1344
+texture = ExtResource( 9 )
+
+[node name="Pillar3" type="Sprite" parent="."]
+position = Vector2( 288, 152 )
+z_index = 1152
+texture = ExtResource( 9 )
+
+[node name="Pillar4" type="Sprite" parent="."]
+position = Vector2( 288, 88 )
+z_index = 1088
+texture = ExtResource( 9 )
+
+[node name="Pillar5" type="Sprite" parent="."]
+position = Vector2( 288, 24 )
+z_index = 1024
+texture = ExtResource( 9 )
+
+[node name="Pillar6" type="Sprite" parent="."]
+position = Vector2( 224, 88 )
+z_index = 1088
+texture = ExtResource( 9 )
+
+[node name="Pillar7" type="Sprite" parent="."]
+position = Vector2( 224, 24 )
+z_index = 1024
+texture = ExtResource( 9 )
+
+[node name="Pillar8" type="Sprite" parent="."]
+position = Vector2( 160, 88 )
+z_index = 1088
+texture = ExtResource( 9 )
+
+[node name="Pillar9" type="Sprite" parent="."]
+position = Vector2( 160, 24 )
+z_index = 1024
+texture = ExtResource( 9 )
+
 [connection signal="pushbody" from="Player" to="Crates/Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crates/Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Throwers/Thrower1"]
