@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Crate.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=5]
 [ext_resource path="res://src/actors/BigFireball.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/light_halo.png" type="Texture" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -555,6 +556,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 26/z_index = 0
 
 [node name="TileMap" type="TileMap"]
+modulate = Color( 0.286275, 0.286275, 0.286275, 1 )
 position = Vector2( -1, 512 )
 tile_set = SubResource( 19 )
 collision_layer = 8
@@ -574,13 +576,21 @@ next_level_scene = "res://src/levels/level_5.tscn"
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 224, 248 )
 
-[node name="AnimatedSprite" parent="Player" index="0"]
-frame = 0
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( 0, -24 )
+z_index = 4000
+z_as_relative = false
+texture = ExtResource( 8 )
+energy = 2.6
+range_z_max = 4000
 
-[node name="CollisionShape2D" parent="Player" index="1"]
+[node name="AnimatedSprite" parent="Player" index="1"]
+frame = 6
+
+[node name="CollisionShape2D" parent="Player" index="2"]
 position = Vector2( 1, -21 )
 
-[node name="Camera2D" parent="Player" index="2"]
+[node name="Camera2D" parent="Player" index="3"]
 limit_top = 64
 limit_right = 2177
 limit_bottom = 1024
@@ -614,7 +624,7 @@ object_trown = ExtResource( 6 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 400, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
