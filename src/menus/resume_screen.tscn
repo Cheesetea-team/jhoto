@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/GUI/resume_screen.png" type="Texture" id=1]
+[ext_resource path="res://assets/map/Dungeon@64x64.png" type="Texture" id=2]
+
+[sub_resource type="GradientTexture" id=1]
+
+[node name="resume_screen" type="CanvasLayer"]
+
+[node name="DarkBg" type="Sprite" parent="."]
+position = Vector2( 512, 511.75 )
+scale = Vector2( 0.5, 1024.5 )
+texture = SubResource( 1 )
+
+[node name="Dungeon64x64" type="Sprite" parent="."]
+position = Vector2( 2316.7, 3916.08 )
+scale = Vector2( 6.32039, 9.67723 )
+texture = ExtResource( 2 )
+
+[node name="TextsAndImages" type="Sprite" parent="."]
+position = Vector2( 507.353, 383.882 )
+texture = ExtResource( 1 )

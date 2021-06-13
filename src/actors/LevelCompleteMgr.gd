@@ -42,6 +42,7 @@ func init_change_level():
 		# If can't find the user, change the level
 		end_change_level()
 	ending_level = true
+	_count_new_level()
 
 # This actually changes the level
 func end_change_level():
@@ -50,3 +51,11 @@ func end_change_level():
 	var next_level = scene_path_prefix + next_level_num + scene_path_postfix
 	if get_tree().change_scene(next_level) != OK:
 		print("Can't change scene!")
+
+func _count_new_level():
+	var global = get_node("/root/GlobalGameCounter")
+	if !global:
+		print("Error getting global Game Counter")
+	else:
+		global.new_level()
+	

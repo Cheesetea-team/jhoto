@@ -933,9 +933,9 @@ position = Vector2( 800, 280 )
 [node name="Pillar6" parent="." instance=ExtResource( 8 )]
 position = Vector2( 800, 408 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
