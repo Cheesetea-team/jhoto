@@ -724,13 +724,13 @@ tile_data = PoolIntArray( -589826, 6, 0, -655360, 26, 0, -655357, 26, 0, -655354
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 7 )]
 position = Vector2( -185.133, -628.125 )
 GoalItems = [ NodePath("../GoalItem"), NodePath("../GoalItem2"), NodePath("../GoalItem3"), NodePath("../GoalItem4"), NodePath("../GoalItem5") ]
-next_level_num = "end"
+next_level_num = "12"
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 96, 1 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 7
+frame = 6
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -884,9 +884,9 @@ object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, 600 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
