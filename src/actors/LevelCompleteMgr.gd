@@ -11,6 +11,16 @@ var ending_level = false
 
 func _ready() -> void:
 	aliveGoalItems = GoalItems
+	_init_new_level_scroller()
+	
+func _init_new_level_scroller():
+	var level = 1
+	var global = get_node("/root/GlobalGameCounter")
+	if !global:
+		print("Error getting global Game Counter")
+	else:
+		level = global.get_level()
+	$NewLevelScroller.get_node("NewLevelLabel").text = "LEVEL %d" % [ level ]
 
 func _process(_delta: float) -> void:
 	var nitems = aliveGoalItems.size()
