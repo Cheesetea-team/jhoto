@@ -730,7 +730,7 @@ next_level_num = "end"
 position = Vector2( 48.4317, 419.601 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 3
+frame = 6
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -914,9 +914,9 @@ object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, 400 )
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]

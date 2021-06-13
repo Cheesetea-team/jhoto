@@ -16,9 +16,17 @@ func on_Arrow_hit():
 	_disable_player()
 	if !$AnimatedSprite.is_connected("animation_finished", self, "_reset_player"):	
 		$AnimatedSprite.connect("animation_finished", self, "_reset_player")
-	$AnimatedSprite.playing = true
-	$AnimatedSprite.animation = "dead"
-	$deathSound.play()
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.animation = "dead"
+		_count_new_death()
+		$deathSound.play()
+
+func _count_new_death():
+	var global = get_node("/root/GlobalGameCounter")
+	if !global:
+		print("Error getting global Game Counter")
+	else:
+		global.new_death()	
 
 func _reset_player():
 	global_position = initial_position
