@@ -841,7 +841,6 @@ position = Vector2( 0, 0 )
 
 [node name="Marker" parent="Crate" index="3"]
 position = Vector2( 0, 0 )
-frame = 2
 
 [node name="Crate2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288, 224 )
@@ -856,7 +855,6 @@ position = Vector2( 0, 0 )
 
 [node name="Marker" parent="Crate2" index="3"]
 position = Vector2( 0, 0 )
-frame = 2
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
@@ -868,7 +866,7 @@ position = Vector2( 157.054, 74.8311 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
 position = Vector2( 0, 0 )
-frame = 5
+frame = 3
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( -2.83655, 22.3314 )
