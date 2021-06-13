@@ -685,9 +685,6 @@ next_level_scene = "res://src/levels/level_1.tscn"
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 224, 248 )
 
-[node name="AnimatedSprite" parent="Player" index="0"]
-frame = 4
-
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
 
@@ -701,14 +698,12 @@ offset_h = 0.0
 drag_margin_left = 0.2
 drag_margin_right = 0.2
 
-[node name="Crates" type="Node" parent="."]
-
-[node name="Crate" parent="Crates" instance=ExtResource( 3 )]
-position = Vector2( 672, 768 )
+[node name="Crate" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 256 )
 sibling_path = NodePath("../Crate2")
 
-[node name="Crate2" parent="Crates" instance=ExtResource( 3 )]
-position = Vector2( 672, 320 )
+[node name="Crate2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, -192 )
 sibling_path = NodePath("../Crate")
 
 [node name="Light_walls" type="Node" parent="."]
@@ -727,7 +722,7 @@ position = Vector2( 160, 288 )
 [node name="Gem2" parent="Gems" instance=ExtResource( 6 )]
 position = Vector2( 1248, 736 )
 
-[connection signal="pushbody" from="Player" to="Crates/Crate2" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crates/Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
