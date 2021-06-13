@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/GUI/boton_salir_seleccion.png" type="Texture" id=6]
 [ext_resource path="res://assets/GUI/boton_jugar_seleccion.png" type="Texture" id=7]
 [ext_resource path="res://src/menus/menu_principal.gd" type="Script" id=8]
-[ext_resource path="res://assets/musicas/jotomusic2.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/musicas/jotomusic3.mp3" type="AudioStream" id=9]
 
 [node name="Menu" type="TextureRect"]
 margin_left = -2.0
