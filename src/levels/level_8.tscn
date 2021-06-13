@@ -730,7 +730,7 @@ next_level_scene = "res://src/menus/Credits.tscn"
 position = Vector2( 96, 1 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 5
+frame = 7
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -747,7 +747,7 @@ drag_margin_left = 0.2
 drag_margin_right = 0.2
 
 [node name="Crate" parent="." instance=ExtResource( 3 )]
-position = Vector2( 98.7541, -197.532 )
+position = Vector2( 957.362, -102.395 )
 sibling_path = NodePath("../Crate2")
 
 [node name="Crate2" parent="." instance=ExtResource( 3 )]
@@ -759,7 +759,7 @@ position = Vector2( 346.375, -7.27844 )
 sibling_path = NodePath("../Crate4")
 
 [node name="Crate4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 973.896, -103.311 )
+position = Vector2( 103.396, -203.204 )
 sibling_path = NodePath("../Crate3")
 
 [node name="Gemas" type="Node" parent="."]
@@ -779,7 +779,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -300, 0 )
 
 [node name="Thrower2" parent="Trowers" instance=ExtResource( 5 )]
-position = Vector2( 1248.15, 303.07 )
+position = Vector2( 1248.15, 433.883 )
 object_trown = ExtResource( 7 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -200, 0 )
@@ -794,8 +794,43 @@ spawn_velocity = Vector2( -200, 0 )
 position = Vector2( 449.909, 151.617 )
 rotation = -1.5708
 object_trown = ExtResource( 7 )
-spawn_offset = Vector2( 0, 64 )
-spawn_velocity = Vector2( 0, -200 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 0, 200 )
+
+[node name="Thrower5" parent="Trowers" instance=ExtResource( 5 )]
+position = Vector2( 1346.15, -31.9079 )
+rotation = -1.5708
+object_trown = ExtResource( 7 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 0, 100 )
+
+[node name="Thrower6" parent="Trowers" instance=ExtResource( 5 )]
+position = Vector2( 894.672, 215.834 )
+rotation = -1.5708
+object_trown = ExtResource( 7 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 0, 200 )
+
+[node name="Thrower7" parent="Trowers" instance=ExtResource( 5 )]
+position = Vector2( 1087.32, 215.834 )
+rotation = -1.5708
+object_trown = ExtResource( 7 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 0, 200 )
+
+[node name="Thrower8" parent="Trowers" instance=ExtResource( 5 )]
+position = Vector2( 606.779, 758.912 )
+rotation = 3.14159
+object_trown = ExtResource( 7 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 300, 0 )
+
+[node name="Thrower9" parent="Trowers" instance=ExtResource( 5 )]
+position = Vector2( 609.158, 571.017 )
+rotation = 3.14159
+object_trown = ExtResource( 7 )
+spawn_offset = Vector2( -64, 0 )
+spawn_velocity = Vector2( 200, 0 )
 
 [connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate4" method="_on_Player_pushbody"]

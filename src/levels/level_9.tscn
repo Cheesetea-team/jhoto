@@ -574,7 +574,7 @@ func _ready():
 #	pass
 "
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap2" type="TileMap"]
 position = Vector2( 0, 256 )
 tile_set = SubResource( 19 )
 show_collision = true
@@ -740,8 +740,8 @@ script = SubResource( 20 )
 position = Vector2( 608, 344 )
 script = SubResource( 20 )
 
-[connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crates/CrateA-1" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crates/CrateA-2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Throwers/ThrowerLeft"]

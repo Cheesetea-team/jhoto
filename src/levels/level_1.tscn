@@ -679,25 +679,14 @@ __meta__ = {
 
 [node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
 position = Vector2( -317.601, -222.097 )
-GoalItems = [ NodePath("../Coin3"), NodePath("../Coin2"), NodePath("../Coin1"), NodePath("../Coin4") ]
+GoalItems = [ NodePath("../Gems/Gem1"), NodePath("../Gems/Gem2") ]
 next_level_scene = "res://src/levels/level_2.tscn"
-
-[node name="Light_wall" parent="." instance=ExtResource( 5 )]
-position = Vector2( 674, -48 )
-
-[node name="Light_wall2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 674, 488 )
-rotation = 3.14159
-
-[node name="Crate" parent="." instance=ExtResource( 3 )]
-position = Vector2( 672, 384 )
-sibling_path = NodePath("../Crate2")
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 223, 261 )
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 3
+frame = 4
 
 [node name="Camera2D" parent="Player" index="2"]
 limit_top = 128
@@ -709,23 +698,32 @@ offset_h = 0.0
 drag_margin_left = 0.2
 drag_margin_right = 0.2
 
+[node name="Crate" parent="." instance=ExtResource( 3 )]
+position = Vector2( 672, 384 )
+sibling_path = NodePath("../Crate2")
+
 [node name="Crate2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 672, 128 )
 sibling_path = NodePath("../Crate")
 
-[node name="Coin3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 800, 232 )
+[node name="Light_walls" type="Node" parent="."]
 
-[node name="Coin4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 544, 232 )
+[node name="Light_wall" parent="Light_walls" instance=ExtResource( 5 )]
+position = Vector2( 674, 208 )
 
-[node name="Coin2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 672, 416 )
+[node name="Light_wall2" parent="Light_walls" instance=ExtResource( 5 )]
+position = Vector2( 674, 744 )
+rotation = 3.14159
 
-[node name="Coin1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 672, 32 )
+[node name="Gems" type="Node" parent="."]
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[node name="Gem1" parent="Gems" instance=ExtResource( 6 )]
+position = Vector2( 672, 672 )
+
+[node name="Gem2" parent="Gems" instance=ExtResource( 6 )]
+position = Vector2( 672, 288 )
+
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]

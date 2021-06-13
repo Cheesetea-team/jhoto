@@ -816,7 +816,7 @@ position = Vector2( 480, 344 )
 z_index = 1216
 texture = ExtResource( 6 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]
