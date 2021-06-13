@@ -800,7 +800,7 @@ position = Vector2( 224, 248 )
 z_index = 1
 
 [node name="AnimatedSprite" parent="Player" index="0"]
-frame = 6
+frame = 2
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )

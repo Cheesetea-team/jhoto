@@ -724,7 +724,7 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 38/shapes = [  ]
 38/z_index = 0
 
-[node name="TileMap2" type="TileMap"]
+[node name="TileMap" type="TileMap"]
 position = Vector2( 0, 256 )
 tile_set = SubResource( 19 )
 show_collision = true
@@ -785,7 +785,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/Thrower1" index="0"]
-frame = 2
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/Thrower1" index="3"]
 wait_time = 2.0
@@ -798,7 +798,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/Thrower2" index="0"]
-frame = 2
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/Thrower2" index="3"]
 wait_time = 1.25
@@ -810,7 +810,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -200, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/Thrower3" index="0"]
-frame = 1
+frame = 2
 
 [node name="SpawnTimer" parent="Throwers/Thrower3" index="3"]
 wait_time = 2.0
@@ -823,7 +823,7 @@ spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 200, 0 )
 
 [node name="AnimatedSprite" parent="Throwers/Thrower4" index="0"]
-frame = 2
+frame = 3
 
 [node name="SpawnTimer" parent="Throwers/Thrower4" index="3"]
 wait_time = 1.25
@@ -873,8 +873,8 @@ position = Vector2( 160, 24 )
 z_index = 1024
 texture = ExtResource( 9 )
 
-[connection signal="pushbody" from="Player" to="Crates/Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crates/Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crates/Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Throwers/Thrower1"]
