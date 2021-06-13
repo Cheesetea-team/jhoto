@@ -782,6 +782,10 @@ next_level_scene = "res://src/levels/level_4.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 224, 248 )
+z_index = 1
+
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 4
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -823,7 +827,7 @@ tile_set = SubResource( 24 )
 format = 1
 tile_data = PoolIntArray( -262142, 0, 0, -196606, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -131070, 0, 0, -131068, 0, 0, -131066, 0, 0, -131065, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]

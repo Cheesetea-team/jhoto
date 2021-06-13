@@ -11,6 +11,7 @@
 
 [node name="Creditos" type="CanvasLayer"]
 script = ExtResource( 5 )
+next_level = "res://src/menus/menu_principal.tscn"
 
 [node name="DarkBg" type="Sprite" parent="."]
 position = Vector2( 512, 511.75 )
