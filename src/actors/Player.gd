@@ -7,9 +7,7 @@ var animating = true
 
 func _ready() -> void:
 	# Start animation
-	animating = true
-	$AnimatedSprite.animation = "level_enter"
-	$AnimatedSprite.connect("animation_finished" , self, "on_animation_end")
+	init_entry_anim()
 	initial_position = global_position
 	self._disable_player()
 
@@ -24,11 +22,9 @@ func on_Arrow_hit():
 func _reset_player():
 	global_position = initial_position
 	$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
-	animating = true
-	$AnimatedSprite.animation = "level_enter"
-	$AnimatedSprite.playing = true
-	$AnimatedSprite.connect("animation_finished" , self, "on_animation_end")
 	_enable_player()
+	# Entry level animation
+	
 
 func _enable_player():
 	set_process(true)
@@ -41,6 +37,13 @@ func _disable_player():
 	set_process(false)
 	set_physics_process(false)
 	$CollisionShape2D.disabled = true
+
+func init_entry_anim():
+	animating = true
+	$AnimatedSprite.animation = "level_enter"
+	$AnimatedSprite.playing = true
+	$AnimatedSprite.frame = 0
+	$AnimatedSprite.connect("animation_finished" , self, "on_animation_end")
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("reset"):
