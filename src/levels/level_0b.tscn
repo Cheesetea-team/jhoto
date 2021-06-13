@@ -543,6 +543,9 @@ rotation = 1.57079
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 223, 261 )
 
+[node name="AnimatedSprite" parent="Player" index="0"]
+frame = 2
+
 [node name="Camera2D" parent="Player" index="2"]
 limit_right = 2048
 limit_bottom = 1024
@@ -561,8 +564,8 @@ position = Vector2( 672, 256 )
 [node name="Crate3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 672, 320 )
 
-[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
-[connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate3" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
 
 [editable path="Player"]

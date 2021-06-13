@@ -3,9 +3,13 @@ extends Actor
 export var speed = Vector2.ZERO
 var movement = Vector2()
 var initial_position = Vector2()
+var animating = true
 
 func _ready() -> void:
+	# Start animation
+	init_entry_anim()
 	initial_position = global_position
+	self._disable_player()
 
 # Hit by an arrow (to be called directly)
 func on_Arrow_hit():
@@ -19,6 +23,8 @@ func _reset_player():
 	global_position = initial_position
 	$AnimatedSprite.disconnect("animation_finished", self, "_reset_player")
 	_enable_player()
+	# Entry level animation
+	
 
 func _enable_player():
 	set_process(true)
@@ -31,6 +37,13 @@ func _disable_player():
 	set_process(false)
 	set_physics_process(false)
 	$CollisionShape2D.disabled = true
+
+func init_entry_anim():
+	animating = true
+	$AnimatedSprite.animation = "level_enter"
+	$AnimatedSprite.playing = true
+	$AnimatedSprite.frame = 0
+	$AnimatedSprite.connect("animation_finished" , self, "on_animation_end")
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("reset"):
@@ -53,7 +66,7 @@ func _process(_delta: float) -> void:
 		$AnimatedSprite.animation = "up"
 	elif md:
 		$AnimatedSprite.animation = "down"
-	else:
+	elif animating == false:
 		$AnimatedSprite.playing = false
 
 func _physics_process(_delta: float) -> void:
@@ -62,3 +75,12 @@ func _physics_process(_delta: float) -> void:
 	for i in range(ncols):
 		var c = get_slide_collision(i)
 		emit_signal("pushbody", c.collider_id, movement*speed)
+
+func on_animation_end():
+	print("end anim")
+	animating = false
+	if $AnimatedSprite.animation == "level_enter":
+		$AnimatedSprite.animation = "right"
+		$AnimatedSprite.playing = false
+		$AnimatedSprite.disconnect("animation_finished", self, "on_animation_end")
+		self._enable_player()
