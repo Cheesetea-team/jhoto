@@ -1,7 +1,10 @@
 extends Node2D
 
 export (Array, NodePath) var GoalItems = []
-export (String) var next_level_scene = null
+export (String) var next_level_num = null
+export (String) var game_end_scene = "res://src/menus/Credits.tscn"
+var scene_path_prefix  = "res://src/levels/level_"
+var scene_path_postfix = ".tscn"
 var aliveGoalItems: Array = []
 #var next_level = null
 var ending_level = false
@@ -12,7 +15,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var nitems = aliveGoalItems.size()
 	if nitems == 0 && !ending_level:
-		if next_level_scene:
+		if next_level_num:
 			init_change_level()
 		else:
 			get_tree().quit(0)
@@ -42,5 +45,8 @@ func init_change_level():
 
 # This actually changes the level
 func end_change_level():
-	if get_tree().change_scene(next_level_scene) != OK:
+	if next_level_num == "end":
+		get_tree().change_scene(game_end_scene)
+	var next_level = scene_path_prefix + next_level_num + scene_path_postfix
+	if get_tree().change_scene(next_level) != OK:
 		print("Can't change scene!")

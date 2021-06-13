@@ -5,6 +5,7 @@
 
 [node name="Creditos" type="CanvasLayer"]
 script = ExtResource( 5 )
+next_level = "res://src/levels/level_00.tscn"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 512, 384 )

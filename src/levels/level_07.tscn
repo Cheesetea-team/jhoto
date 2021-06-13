@@ -1,12 +1,12 @@
 [gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/map/DungeonColor2@64x64.png" type="Texture" id=1]
-[ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/Fireball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/actors/Thrower.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/actors/Fireball.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/actors/GoalItem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/actors/Crate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/actors/LevelCompleteMgr.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 128, 192, 0, 192, 0, 0, 128, 0 )
@@ -701,16 +701,13 @@ __meta__ = {
 "_edit_vertical_guides_": [ 1473.0, -63.0 ]
 }
 
-[node name="LevelCompleteManager" parent="." instance=ExtResource( 2 )]
+[node name="LevelCompleteManager" parent="." instance=ExtResource( 7 )]
 position = Vector2( -185.133, -628.125 )
 GoalItems = [ NodePath("../GoalItem") ]
-next_level_scene = "res://src/levels/level_6.tscn"
+next_level_num = "08"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 160, 248 )
-
-[node name="AnimatedSprite" parent="Player" index="0"]
-frame = 5
 
 [node name="CollisionShape2D" parent="Player" index="1"]
 position = Vector2( 1, -21 )
@@ -725,122 +722,131 @@ offset_h = 0.0
 drag_margin_left = 0.2
 drag_margin_right = 0.2
 
-[node name="Crate" parent="." instance=ExtResource( 3 )]
+[node name="Crate" parent="." instance=ExtResource( 6 )]
 position = Vector2( 288.118, 242.53 )
 sibling_path = NodePath("../Crate2")
 
-[node name="Crate2" parent="." instance=ExtResource( 3 )]
+[node name="Crate2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 160, -328 )
 sibling_path = NodePath("../Crate")
 
-[node name="GoalItem" parent="." instance=ExtResource( 6 )]
+[node name="GoalItem" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96, -352 )
 
-[node name="Thrower1_1" parent="." instance=ExtResource( 5 )]
+[node name="Thrower1_1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 735, 225 )
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
 
 [node name="AnimatedSprite" parent="Thrower1_1" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower1_1" index="3"]
 wait_time = 2.5
 
-[node name="Thrower1_2" parent="." instance=ExtResource( 5 )]
+[node name="Thrower1_2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 735, 225 )
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, -24 )
 spawn_velocity = Vector2( -128, -128 )
 
 [node name="AnimatedSprite" parent="Thrower1_2" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower1_2" index="3"]
 wait_time = 2.5
 
-[node name="Thrower1_3" parent="." instance=ExtResource( 5 )]
+[node name="Thrower1_3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 735, 225 )
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 24 )
 spawn_velocity = Vector2( -128, 128 )
 
 [node name="AnimatedSprite" parent="Thrower1_3" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower1_3" index="3"]
 wait_time = 2.5
 
-[node name="Thrower2_1" parent="." instance=ExtResource( 5 )]
+[node name="Thrower2_1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 416 )
 rotation = 1.57079
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 0, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2_1" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower2_1" index="3"]
 wait_time = 2.0
 
-[node name="Thrower2_2" parent="." instance=ExtResource( 5 )]
+[node name="Thrower2_2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 416 )
 rotation = 1.57079
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, -32 )
 spawn_velocity = Vector2( 50, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2_2" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower2_2" index="3"]
 wait_time = 2.0
 
-[node name="Thrower2_3" parent="." instance=ExtResource( 5 )]
+[node name="Thrower2_3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 416 )
 rotation = 1.57079
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 32 )
 spawn_velocity = Vector2( -50, -128 )
 
 [node name="AnimatedSprite" parent="Thrower2_3" index="0"]
-frame = 3
+frame = 2
 
 [node name="SpawnTimer" parent="Thrower2_3" index="3"]
 wait_time = 2.0
 
-[node name="Thrower3" parent="." instance=ExtResource( 5 )]
+[node name="Thrower3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1243, 384 )
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
+
+[node name="AnimatedSprite" parent="Thrower3" index="0"]
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower3" index="3"]
 wait_time = 2.5
 
-[node name="Thrower5" parent="." instance=ExtResource( 5 )]
+[node name="Thrower5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 933, 128 )
 rotation = 3.14159
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( 312, 0 )
+
+[node name="AnimatedSprite" parent="Thrower5" index="0"]
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower5" index="3"]
 wait_time = 1.0
 
-[node name="Thrower4" parent="." instance=ExtResource( 5 )]
+[node name="Thrower4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1372, -320 )
-object_trown = ExtResource( 7 )
+object_trown = ExtResource( 2 )
 spawn_offset = Vector2( -64, 0 )
 spawn_velocity = Vector2( -128, 0 )
+
+[node name="AnimatedSprite" parent="Thrower4" index="0"]
+frame = 3
 
 [node name="SpawnTimer" parent="Thrower4" index="3"]
 wait_time = 2.5
 
-[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 [connection signal="pushbody" from="Player" to="Crate2" method="_on_Player_pushbody"]
+[connection signal="pushbody" from="Player" to="Crate" method="_on_Player_pushbody"]
 
 [editable path="Player"]
 [editable path="Thrower1_1"]
