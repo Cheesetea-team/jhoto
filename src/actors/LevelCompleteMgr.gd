@@ -2,7 +2,7 @@ extends Node2D
 
 export (Array, NodePath) var GoalItems = []
 export (String) var next_level_num = null
-export (String) var game_end_scene = "res://src/menus/Credits.tscn"
+export (String) var game_end_scene = "res://src/menus/resume_screen.tscn"
 var scene_path_prefix  = "res://src/levels/level_"
 var scene_path_postfix = ".tscn"
 var aliveGoalItems: Array = []

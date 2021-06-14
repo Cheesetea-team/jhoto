@@ -40,9 +40,9 @@ __meta__ = {
 
 [node name="Boton_Creditos" type="TextureButton" parent="."]
 margin_left = 364.33
-margin_top = 491.86
+margin_top = 500.0
 margin_right = 672.33
-margin_bottom = 627.86
+margin_bottom = 636.0
 focus_neighbour_top = NodePath("../Boton_jugar")
 focus_neighbour_bottom = NodePath("../Boton_salir")
 focus_next = NodePath("../Boton_salir")
@@ -57,9 +57,9 @@ __meta__ = {
 
 [node name="Boton_salir" type="TextureButton" parent="."]
 margin_left = 365.026
-margin_top = 619.736
+margin_top = 640.0
 margin_right = 673.026
-margin_bottom = 755.736
+margin_bottom = 776.0
 focus_neighbour_top = NodePath("../Boton_Creditos")
 focus_neighbour_bottom = NodePath("../Boton_jugar")
 focus_next = NodePath("../Boton_jugar")

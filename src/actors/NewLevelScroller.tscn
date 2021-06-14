@@ -4,13 +4,13 @@
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://assets/GUI/Alkhemikal.ttf"
 
 [sub_resource type="DynamicFont" id=3]
 size = 80
 outline_size = 1
-font_data = SubResource( 2 )
+font_data = SubResource( 4 )
 
 [node name="NewLevelScroller" type="CanvasLayer"]
 script = ExtResource( 1 )

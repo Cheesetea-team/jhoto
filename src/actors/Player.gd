@@ -60,7 +60,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
 	elif Input.is_action_pressed("exit"):
-		get_tree().change_scene("res://src/menus/menu_principal.tscn")
+		get_tree().change_scene("res://src/menus/resume_screen.tscn")
 	var mr = int(Input.is_action_pressed("move_right"))
 	var ml = int(Input.is_action_pressed("move_left"))
 	var mu = int(Input.is_action_pressed("move_up"))
