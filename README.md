@@ -1,3 +1,6 @@
-# joto
-JOined TOgether with JOaquin TOrralba
-Hola, pa ti mi cola
+<p><strong><em>Jhoto</em></strong>, the interdimensional magician is stuck in the joined together dimension. To scape, it needs to recover enough power from the toho crystals. As you have lost your powers, you will need to traverse the world with ingenuity instead of magic. Use the characteristics of the jointed together objects of this dimension to take advantage, dodge the perils and get the toho crystals.&nbsp;</p>
+<p>Credits:</p>
+<ul><li>Francisco J. Gallego-Durán (aka <strong><em>ronaldo,&nbsp;</em></strong><a href="https://www.twitter.com/FranGallegoBR" target="_blank">@FranGallegoBR</a>)</li><li>Héctor Linares Pérez (aka <strong><em>predator</em></strong>,&nbsp;<a href="https://www.twitter.com/hec_linares" target="_blank">@hec_linares</a>)</li><li>Joaquín Ferreras Torralba (aka <strong><em>raymost</em></strong>,&nbsp;<a href="https://www.twitter.com/raymost" target="_blank">@raymost</a>)</li></ul>
+<p>CopyNow (CN) <strong><em>Cheesetea</em></strong>&nbsp;<br>[~v~^~]&gt;for the&nbsp;#GMTKJam&nbsp;2021&nbsp;</p>
+<ul><li>First Gameplay by Alfonso Carmona&nbsp; (Beta2 version)<div class="video-container"><iframe width="500" height="281" src="//www.youtube.com/embed/hBMoVjBhHkI" frameborder="0" allowfullscreen=""></iframe></div></li></ul>
+<ul><li>Second Gameplay by Carlos Perezgrin&nbsp; (Final&nbsp;#GMTK version)<div class="video-container"><iframe width="500" height="281" src="//www.youtube.com/embed/n-XNU_FcCQk" frameborder="0" allowfullscreen=""></iframe></div></li></ul>
